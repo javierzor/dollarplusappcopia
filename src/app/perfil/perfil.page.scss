@@ -1,0 +1,12 @@
+ion-intl-tel-input {
+    ::ng-deep .ionic-selectable-has-placeholder div.ionic-selectable-value-item 
+    {
+      content: "krt";
+    //   display: inline-block;
+      width: 23px;
+      // background: url("../../assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
+      // background-color: var(--placeholder-color,#777);
+      height: 18px;
+      font-size: 0px;
+    }
+  }

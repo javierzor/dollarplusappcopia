@@ -1,0 +1,7 @@
+{
+  "name": "dollarplusapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

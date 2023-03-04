@@ -1,0 +1,164 @@
+<ion-header>
+   <ion-toolbar>
+         <img style="width:160px; height:100%; margin-left:20px;" src="assets/dollarplusrecursos/logo-cabecera-app.svg">
+   </ion-toolbar>
+</ion-header>
+
+
+
+
+
+<ion-content padding>
+   <br>
+
+   <section *ngIf="this.step=='login'">
+      <ion-buttons>
+         <ion-button href="https://dollarplus.pe">
+            <ion-icon color="secondary" style="font-size: 30px; " name="arrow-back-outline"></ion-icon>
+         </ion-button>
+      </ion-buttons>
+      <ion-grid class="ocultar768paraarriba">
+         <ion-row>
+            <ion-col id="somelement" align-self-center size-md="6" size-lg="5" size-xs="12" size>
+               <ion-row class="row" class="ion-no-padding" no-padding>
+
+
+               </ion-row>
+
+
+                  <ion-card style=" padding-left:10%; padding-right:10%;padding-right:10%;padding-bottom:10%;" color="none">
+
+                     <ion-text>
+                        <h2 class="fuenteraleway;" style="font-size:xx-large;color:var(--ion-color-secondary);">Iniciar sesión</h2>
+                        <p>¿Aún no tienes cuenta? <a (click)="iraregistrarse()">Regístrate →</a></p>
+                     </ion-text>
+
+                  <ion-item class="ion-align-items-center">
+                     <ion-label color="secondary" position="floating">Correo:</ion-label>
+                     <ion-input (keyup.enter)="logear()" [(ngModel)]="loginuser" placeholder="Correo:"
+                        style="color:var(--ion-color-primary)"></ion-input>
+                     <ion-icon style="font-size:large;" color="primary" name="person-outline" slot="start"></ion-icon>
+                  </ion-item>
+                  <ion-item class="ion-align-items-center">
+                     <ion-label color="secondary" position="floating">Contraseña:</ion-label>
+                     <ion-input (keyup.enter)="logear()" [(ngModel)]="loginpassword" placeholder="Contraseña" style="color:var(--ion-color-primary)"
+                        type="password"></ion-input>
+                     <ion-icon style="font-size:large;" color="primary" name="lock-closed-outline"
+                        slot="start"></ion-icon>
+                  </ion-item>
+
+                  <ion-row class="ion-align-items-center">
+                     <ion-col size-lg="5" size-md="5"  size-sm="5" size-xl="5" size-xs="7">
+                        <ion-item color="none" lines="none" class="ion-no-padding" no-padding>
+                           <ion-checkbox  [(ngModel)]="recordar" class="ion-no-padding" no-padding style="--background: var(--ion-color-secondary); margin: 0px 0px 0px 0px!important;"></ion-checkbox>
+                           <span style="color:(--ion-color-primary)">Recordar</span>
+                        </ion-item>
+                     </ion-col>
+                     <ion-col size-lg="7" size-md="7"  size-sm="7" size-xl="7" size-xs="5" style="text-align: right;">
+                      <a>
+                         <ion-text style="color:var(--ion-color-secondary);">
+                            <h6>
+                               <a style="cursor:pointer;" (click)="olvide()">Olvidé mi contraseña</a>
+                            </h6>
+                         </ion-text>
+                      </a>
+                   </ion-col>
+                </ion-row>
+           
+                  <br>
+          
+                  <ion-row class="ion-align-items-center">
+                   <ion-col size="12">
+                      <ion-button color="primary" (click)="logear()" expand="block">Iniciar sesión</ion-button>
+                   </ion-col>
+                </ion-row>
+           
+               </ion-card>
+
+
+            </ion-col>
+         </ion-row>
+      </ion-grid>
+
+
+
+      <ion-grid class="ocultar767paraabajo">
+         <ion-row>
+
+<ion-col size="6.5">
+<img style="width:40vw;height: 80vh; margin-left:35px; border-radius: 8px;" src="assets/dollarplusrecursos/imagen_dollar_plus.png">
+</ion-col>
+
+<ion-col size="5.5"  align-self-center size-md="5.5" size-lg="5.5" size-xs="5.5" size>
+
+
+      <ion-card style=" padding-left:10%; padding-right:10%;padding-right:10%;padding-bottom:10%;" color="none">
+
+         <ion-text>
+            <h2 class="fuenteraleway;" style="font-size:xx-large;color:var(--ion-color-secondary);">Iniciar sesión</h2>
+            <p>¿An no tienes cuenta? <a (click)="iraregistrarse()">Regístrate →</a></p>
+         </ion-text>
+
+         
+
+        <ion-item class="ion-align-items-center">
+           <ion-label color="secondary" position="floating">Correo:</ion-label>
+           <ion-input [(ngModel)]="loginuser" placeholder="Correo:"
+              style="color:var(--ion-color-primary)"></ion-input>
+           <ion-icon style="font-size:large;" color="primary" name="person-outline" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item class="ion-align-items-center">
+           <ion-label color="secondary" position="floating">Contraseña:</ion-label>
+           <ion-input [(ngModel)]="loginpassword" placeholder="Contraseña" style="color:var(--ion-color-primary)"
+              type="password"></ion-input>
+           <ion-icon style="font-size:large;" color="primary" name="lock-closed-outline"
+              slot="start"></ion-icon>
+        </ion-item>
+        <ion-row class="ion-align-items-center">
+           <ion-col  size-lg="5" size-md="7"  size-sm="7" size-xl="5" size-xs="7">
+              <ion-item color="none" lines="none" class="ion-no-padding" no-padding>
+                 <ion-checkbox [(ngModel)]="recordar" style="--background: var(--ion-color-secondary)"></ion-checkbox>
+                 &nbsp;&nbsp;<span style="color:(--ion-color-primary)">Recordar</span>
+              </ion-item>
+           </ion-col>
+           <ion-col size-lg="7" size-md="5"  size-sm="5" size-xl="7" size-xs="5" style="text-align: right;">
+            <a>
+               <ion-text style="color:var(--ion-color-secondary);">
+                  <h6>
+                     <a style="cursor:pointer;" (click)="olvide()">Olvidé mi contraseña</a>
+                  </h6>
+               </ion-text>
+            </a>
+         </ion-col>
+      </ion-row>
+ 
+        <ion-row class="ion-align-items-center">
+         <ion-col size="12">
+            <ion-button color="primary" (click)="logear()" expand="block">Iniciar sesión</ion-button>
+         </ion-col>
+      </ion-row>
+ 
+     </ion-card>
+
+
+</ion-col>
+
+
+
+
+         </ion-row>
+      </ion-grid>
+
+   </section>
+
+   <!-- registro de distribuidor -->
+
+   <section *ngIf="step=='recuperar'">
+
+
+
+   </section>
+
+
+
+</ion-content>
