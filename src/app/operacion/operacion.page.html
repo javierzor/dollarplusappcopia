@@ -36,7 +36,7 @@
 </div>
 
 
-  <ion-text style="text-align:center"><h2 style="color:primary;">Tipo de cambio hoy</h2></ion-text>
+  <ion-text class="fuenteraleway" class="fuenteraleway"  style="text-align:center"><h2 class="fuenteraleway" style="color:primary;"><strong>Tipo</strong> de <strong>Cambio</strong> hoy en <strong>Perú</strong></h2></ion-text>
   <br>
 
 
@@ -47,29 +47,29 @@
 
     </ion-col>
     <ion-col size-md="10" size-lg="5" size-xs="10">
-      <ion-card >
+      <ion-card style="padding:22px!important; border-radius:11px!important;">
 
-        <ion-fab-button (click)="cambiarmododeoperacion()"  style="z-index:1; position:absolute; right:10%; top:45%;">
-          <ion-icon style="color:var(--ion-color-secondary);" name="swap-vertical"></ion-icon>
+        <ion-fab-button (click)="cambiarmododeoperacion()" color="secondary"  style="z-index:1; position:absolute; right:15%; top:48%">
+          <ion-icon style="color:var(--ion-color-primary); transform: rotate(45deg); font-size:xx-large;" name="sync"></ion-icon>
         </ion-fab-button>
 
-        <ion-card-header><strong>Cambia ahora</strong></ion-card-header>
+        <!-- <ion-card-header><strong>Cambia ahora</strong></ion-card-header> -->
 
         <ion-row *ngIf="compradollarplus&&ventadollarplus">
           <ion-col size="6">
-            <div class="ion-text-left">
-              <ion-text><a style="color:secondary">Compra:</a><span class="v2-badge v2-badge-compra">{{compradollarplus| number : '1.3-3'}}</span></ion-text>
+            <div class="ion-text-center">
+              <ion-text><a style="color:secondary">Compra:</a><span class="v2-badge v2-badge-venta">{{compradollarplus| number : '1.3-3'}}</span></ion-text>
             </div>
           </ion-col>
-          <ion-col size="6">
-            <div class="ion-text-right">
+          <ion-col size="6" style="background-color:var(--ion-color-secondary); border-radius:13px;">
+            <div class="ion-text-center">
               <ion-text><a style="color:primary">Venta:</a><span class="v2-badge v2-badge-venta">{{ventadollarplus| number : '1.3-3'}}</span></ion-text>
             </div>
           </ion-col>
         </ion-row>
 
         <ion-card-content>
-          <div style="border-radius:6px; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-primary);">
+          <div style="border-radius:6px; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-secondary);  padding:5px;">
             <ion-text><h2 style="font-size:large; color:var(--ion-color-primary);">Envias:</h2></ion-text>
             <span  class="input-soles left">
               <input [disabled]="!compradollarplus" (input)="CHANGESolesaenviar($event)" inputmode="numeric" class="sinborde sinflechitas" style="color:var(--ion-color-secondary); font-size:large; max-width: 100%;min-width: 100%;width: 100%;" type="text" #camposolesaenviar placeholder="Soles a enviar" (keypress)="isNumberKeyAndLengtSolesaenviar($event)" required />
@@ -77,19 +77,19 @@
           </div>
         <br/>
 
-        <div style="border-radius:6px; height:65px!important; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-primary);">
+        <div style="border-radius:6px; height:65px!important; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-secondary);  padding:5px;">
           <ion-text><h2 style="font-size:large; color:var(--ion-color-primary);">Tu Recibes:</h2></ion-text>
           <span class="input-dolar left">
             <input [disabled]="!compradollarplus" (input)="CHANGEDolaresarecibir($event)" inputmode="numeric" class="sinborde sinflechitas" style="color:var(--ion-color-secondary); font-size:large; max-width: 100%;min-width: 100%;width: 100%;" type="text" #campodolaresarecibir placeholder="Dólares a recibir" (keypress)="isNumberKeyAndLengthDolaresarecibir($event)" required />
-            <!-- <ion-text style="color:var(--ion-color-secondary); font-size:large; max-width: 100%;min-width: 100%;width: 100%;"> &nbsp;  &nbsp;  &nbsp; {{solesaenviar/ventadollarplus| number : '1.2-2'}}</ion-text> -->
+            <!-- <ion-text class="fuenteraleway" style="color:var(--ion-color-secondary); font-size:large; max-width: 100%;min-width: 100%;width: 100%;"> &nbsp;  &nbsp;  &nbsp; {{solesaenviar/ventadollarplus| number : '1.2-2'}}</ion-text> -->
           </span>
         </div>
         </ion-card-content>
-        <div class="ion-text-center">
-          <ion-button (click)="step2()" color="primary">Iniciar Operación</ion-button>
-        </div>
       </ion-card>
 
+      <div class="ion-text-center">
+        <ion-button (click)="step2()" class="botonredondo" color="primary">Iniciar Operación</ion-button>
+      </div>
       
     </ion-col>
     <ion-col size-md="1" size-lg="3.5" size-xs="1">
@@ -105,23 +105,23 @@
 
     </ion-col>
     <ion-col size-md="10" size-lg="5" size-xs="10">
-      <ion-card >
+      <ion-card style="padding:22px!important;border-radius:11px!important;">
 
-        <ion-fab-button (click)="cambiarmododeoperacion()"  style="z-index:1; position:absolute; right:0%; top:45%;">
-          <ion-icon style="color:var(--ion-color-secondary);" name="swap-vertical"></ion-icon>
+        <ion-fab-button (click)="cambiarmododeoperacion()" color="primary" style="z-index:1; position:absolute; right:15%; top:48%">
+          <ion-icon style="color:var(--ion-color-secondary); transform: rotate(60deg); font-size:xx-large;" name="sync"></ion-icon>
         </ion-fab-button>
         
 
-        <ion-card-header><strong>Cambia ahora</strong></ion-card-header>
+        <!-- <ion-card-header><strong>Cambia ahora</strong></ion-card-header> -->
 
         <ion-row *ngIf="compradollarplus&&ventadollarplus">
-          <ion-col size="6">
-            <div class="ion-text-left">
-              <ion-text><a style="color:secondary">Compra:</a><span class="v2-badge v2-badge-compra">{{compradollarplus}}</span></ion-text>
+          <ion-col size="6"  style="background-color:var(--ion-color-secondary); border-radius:13px;">
+            <div class="ion-text-center">
+              <ion-text><a style="color:secondary">Compra:</a><span class="v2-badge v2-badge-venta">{{compradollarplus}}</span></ion-text>
             </div>
           </ion-col>
           <ion-col size="6">
-            <div class="ion-text-right">
+            <div class="ion-text-center">
               <ion-text><a style="color:primary">Venta:</a><span class="v2-badge v2-badge-venta">{{ventadollarplus}}</span></ion-text>
             </div>
           </ion-col>
@@ -130,27 +130,27 @@
 
 
         <ion-card-content>
-          <div style="border-radius:6px; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-primary);">
+          <div style="border-radius:6px; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-secondary); padding:5px;">
             <ion-text><h2 style="font-size:large; color:var(--ion-color-primary);">Envias:</h2></ion-text>
             <span  class="input-dolar left">
               <input (input)="CHANGEDolaresaenviar($event)" inputmode="numeric" class="sinborde sinflechitas" style="color:var(--ion-color-secondary); font-size:large; max-width: 100%;min-width: 100%;width: 100%;" type="text" #campodolaresaenviar (keypress)="isNumberKeyAndLengtDolaresaenviar($event)" placeholder="Dólares a enviar" required />
             </span>
           </div>
         <br/>
-        <div style="border-radius:6px; height:65px!important; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-primary);">
+        <div style="border-radius:6px; height:65px!important; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-secondary); padding:5px;">
           <ion-text><h2 style="font-size:large; color:var(--ion-color-primary);">Tu Recibes:</h2></ion-text>
           <span class="input-soles left">
-            <!-- <ion-text style="color:var(--ion-color-secondary); font-size:large; max-width: 100%;min-width: 100%;width: 100%;"> &nbsp;  &nbsp;  &nbsp; {{dolaresaenviar*compradollarplus | number : '1.2-2'}}</ion-text> -->
+            <!-- <ion-text class="fuenteraleway" style="color:var(--ion-color-secondary); font-size:large; max-width: 100%;min-width: 100%;width: 100%;"> &nbsp;  &nbsp;  &nbsp; {{dolaresaenviar*compradollarplus | number : '1.2-2'}}</ion-text> -->
             <input (input)="CHANGESolesarecibir($event)" inputmode="numeric" class="sinborde sinflechitas" style="color:var(--ion-color-secondary); font-size:large; max-width: 100%;min-width: 100%;width: 100%;" type="text" #camposolesarecibir (keypress)="isNumberKeyAndLengtSolesarecibir($event)" placeholder="Soles A Recibir" required />
 
           </span>
         </div>
         </ion-card-content>
-        <div class="ion-text-center">
-          <ion-button (click)="step2()" color="primary">Iniciar Operación</ion-button>
-        </div>
       </ion-card>
 
+      <div class="ion-text-center">
+        <ion-button (click)="step2()" class="botonredondo" color="primary">Iniciar Operación</ion-button>
+      </div>
       
     </ion-col>
     <ion-col size-md="1" size-lg="3.5" size-xs="1">
@@ -233,8 +233,8 @@
 
               <ion-row *ngFor="let cadacredito of this.profileInfo.creditos" class="ion-align-items-center ion-text-center ion-no-padding" no-padding>
                 <ion-col size="3" class="ion-no-padding" no-padding>
-                  <ion-text *ngIf="cadacredito.id_publico!=cadacredito.id_publico_generador">{{cadacredito.id_publico_generador}}</ion-text>
-                  <ion-text *ngIf="cadacredito.id_publico==cadacredito.id_publico_generador">Mi</ion-text>                
+                  <ion-text class="fuenteraleway" *ngIf="cadacredito.id_publico!=cadacredito.id_publico_generador">{{cadacredito.id_publico_generador}}</ion-text>
+                  <ion-text class="fuenteraleway" *ngIf="cadacredito.id_publico==cadacredito.id_publico_generador">Mi</ion-text>                
                 </ion-col>
                 <ion-col size="3" class="ion-no-padding" no-padding>
                   {{cadacredito.monto_ganado}}
@@ -259,11 +259,11 @@
       
         <ion-col style="padding-bottom:0px!important; padding-top:0px!important;" size-md="12" size-lg="6" size-xs="12">
           <ion-card  style="padding-left:20px!important;padding-bottom:0px!important; padding-top:0px!important;">
-            <ion-text style="color:var(--ion-color-secondary);" *ngIf="quierecomprardolares"><h3>Enviaré Soles</h3></ion-text>
-            <ion-text style="color:var(--ion-color-secondary);" *ngIf="!quierecomprardolares"><h3>Enviaré Dólares</h3></ion-text>
+            <ion-text class="fuenteraleway" style="color:var(--ion-color-secondary);" *ngIf="quierecomprardolares"><h3>Enviaré Soles</h3></ion-text>
+            <ion-text class="fuenteraleway" style="color:var(--ion-color-secondary);" *ngIf="!quierecomprardolares"><h3>Enviaré Dólares</h3></ion-text>
 
-            <ion-text *ngIf="quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img src="assets/dollarplusrecursos/banderas-peru-eeuu/peru.png"/> PEN | {{solesaenviar}}</p></h4></ion-text>
-            <ion-text *ngIf="!quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img style="width:20px;height:20px;" src="assets/dollarplusrecursos/banderas-peru-eeuu/eeuu.png"/> USD | {{dolaresaenviar}}</p></h4></ion-text>
+            <ion-text class="fuenteraleway" *ngIf="quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img src="assets/dollarplusrecursos/banderas-peru-eeuu/peru.png"/> PEN | {{solesaenviar}}</p></h4></ion-text>
+            <ion-text class="fuenteraleway" *ngIf="!quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img style="width:20px;height:20px;" src="assets/dollarplusrecursos/banderas-peru-eeuu/eeuu.png"/> USD | {{dolaresaenviar}}</p></h4></ion-text>
             <ion-text><h5><p>¿Desde qué banco nos enviarás el dinero?</p></h5></ion-text>
             <ion-select [(ngModel)]="banco_que_envia" interface="popover" [interfaceOptions]="{ cssClass: 'clasebancosselector', size: 'cover' , side:'bottom',  alignment:'center' }" placeholder="Seleccionar banco" style="width:92%; border-radius:6px; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-primary);">
               <ion-select-option value="BCP"> Banco De  Crédito BCP </ion-select-option>
@@ -271,7 +271,7 @@
               <ion-select-option value="BBVA"> BBVA </ion-select-option>
               <ion-select-option value="ScotiaBank"> ScotiaBank </ion-select-option>
               <ion-select-option value="BanBif"> BanBif </ion-select-option>
-              <ion-select-option value="Pichancha"> Pichancha </ion-select-option>
+              <ion-select-option value="Pichincha"> Pichincha </ion-select-option>
               <ion-select-option value="Banco de la Nación"> Banco de la Nación </ion-select-option>
               <ion-select-option value="GNB"> GNB </ion-select-option>
               <ion-select-option value="Santander"> Santander </ion-select-option>
@@ -281,7 +281,7 @@
               <ion-select-option value="Banco del Comercio"> Banco del Comercio </ion-select-option>
             </ion-select>
 
-            <ion-text style="padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:0px;"><h6><p>La cuenta debe pertenecer a:
+            <ion-text class="fuenteraleway" style="padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:0px;"><h6><p>La cuenta debe pertenecer a:
             <a *ngIf="profileInfo&&profileInfo.lastname2!=null" style="padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:0px;"><h6>{{profileInfo.name}} {{profileInfo.lastname}} {{profileInfo.lastname2}}</h6></a>
             <a *ngIf="profileInfo&&profileInfo.lastname2==null" style="padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:0px;"><h6>{{profileInfo.name}} {{profileInfo.lastname}}</h6></a>
             </p></h6></ion-text>
@@ -290,11 +290,11 @@
         
         <ion-col style="padding-bottom:0px!important; padding-top:0px!important;" size-md="12" size-lg="6" size-xs="12">
           <ion-card  style="padding-left:20px!important;padding-bottom:0px!important; padding-top:0px!important;">
-            <ion-text style="color:var(--ion-color-secondary);" *ngIf="quierecomprardolares"><h3>Recibire Dólares</h3></ion-text>
-            <ion-text style="color:var(--ion-color-secondary);" *ngIf="!quierecomprardolares"><h3>Recibire Soles</h3></ion-text>
+            <ion-text class="fuenteraleway" style="color:var(--ion-color-secondary);" *ngIf="quierecomprardolares"><h3>Recibire Dólares</h3></ion-text>
+            <ion-text class="fuenteraleway" style="color:var(--ion-color-secondary);" *ngIf="!quierecomprardolares"><h3>Recibire Soles</h3></ion-text>
 
-            <ion-text *ngIf="quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img src="assets/dollarplusrecursos/banderas-peru-eeuu/eeuu.png"/> USD | {{dolaresarecibir}} <a *ngIf="credito_usado">+{{credito_usado}}</a></p></h4></ion-text>
-            <ion-text *ngIf="!quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img style="width:20px;height:20px;" src="assets/dollarplusrecursos/banderas-peru-eeuu/peru.png"/> PEN | {{solesarecibir}} <a *ngIf="credito_usado">+{{credito_usado}}</a></p></h4></ion-text> 
+            <ion-text class="fuenteraleway" *ngIf="quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img src="assets/dollarplusrecursos/banderas-peru-eeuu/eeuu.png"/> USD | {{dolaresarecibir}} <a *ngIf="credito_usado">+{{credito_usado}}</a></p></h4></ion-text>
+            <ion-text class="fuenteraleway" *ngIf="!quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img style="width:20px;height:20px;" src="assets/dollarplusrecursos/banderas-peru-eeuu/peru.png"/> PEN | {{solesarecibir}} <a *ngIf="credito_usado">+{{credito_usado}}</a></p></h4></ion-text> 
             <ion-text><h5><p>¿A dónde te transferimos?</p></h5>
 
               <h6 *ngIf="!agrego_algo"><p>Selecciona una opción:</p></h6></ion-text>
@@ -334,7 +334,7 @@
             </section>
             <section *ngIf="agrego_algo">
               <section *ngIf="agrego_algo=='cuenta'">
-                <ion-text style="text-align:center;">
+                <ion-text class="fuenteraleway" style="text-align:center;">
                   <h4><strong>Tarjeta del {{data_de_deposito.banco_cuenta}}</strong></h4>
                   <h6>De: {{data_de_deposito.titular_cuenta}}</h6>
                   <h5><strong>Nº: {{data_de_deposito.numero_cuenta}}</strong></h5>
@@ -344,7 +344,7 @@
                 </ion-text>
               </section>
               <section *ngIf="agrego_algo=='tarjeta'">
-                <ion-text style="text-align:center;">
+                <ion-text class="fuenteraleway" style="text-align:center;">
                   <h4><strong>Tarjeta del {{data_de_deposito.banco_tarjeta}}</strong></h4>
                   <h6>De: {{data_de_deposito.titular_tarjeta}}</h6>
                   <h5><strong>Nº: {{data_de_deposito.numero_tarjeta}}</strong></h5>
@@ -441,15 +441,15 @@
         <ion-col style="padding-bottom:0px!important; padding-top:0px!important;" size-md="12" size-lg="6" size-xs="12">
           <ion-card  style="padding-left:20px!important;padding-bottom:0px!important; padding-top:0px!important;">
 
-            <ion-text style="color:var(--ion-color-secondary);"><h3>Debes Transferir:</h3></ion-text>
+            <ion-text class="fuenteraleway" style="color:var(--ion-color-secondary);"><h3>Debes Transferir:</h3></ion-text>
 
-            <ion-text *ngIf="quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img src="assets/dollarplusrecursos/banderas-peru-eeuu/peru.png"/> PEN | {{solesaenviar| number : '1.2-2'}}</p></h4></ion-text>
-            <ion-text *ngIf="!quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img style="width:20px;height:20px;" src="assets/dollarplusrecursos/banderas-peru-eeuu/eeuu.png"/> USD | {{dolaresaenviar| number : '1.2-2'}}</p></h4></ion-text>
+            <ion-text class="fuenteraleway" *ngIf="quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img src="assets/dollarplusrecursos/banderas-peru-eeuu/peru.png"/> PEN | {{solesaenviar| number : '1.2-2'}}</p></h4></ion-text>
+            <ion-text class="fuenteraleway" *ngIf="!quierecomprardolares" style="color:var(--ion-color-secondary);" ><h4><p><img style="width:20px;height:20px;" src="assets/dollarplusrecursos/banderas-peru-eeuu/eeuu.png"/> USD | {{dolaresaenviar| number : '1.2-2'}}</p></h4></ion-text>
             <ion-text><h6><strong>Transfiere por la web o app de tu banco a la siguiente cuenta:</strong></h6></ion-text>
             <ion-card>
               <ion-card-content>
 
-              <ion-text *ngIf="cuenta_bancaria_admin" style="text-align:center;">
+              <ion-text class="fuenteraleway" *ngIf="cuenta_bancaria_admin" style="text-align:center;">
                 <h4><strong>Banco: {{cuenta_bancaria_admin.banco}}</strong></h4>
                 <h6>Moneda: {{cuenta_bancaria_admin.moneda}}</h6>
                 <h5><strong>Tipo: {{cuenta_bancaria_admin.tipo}}</strong></h5>
@@ -465,7 +465,7 @@
         
         <ion-col style="padding-bottom:0px!important; padding-top:0px!important;" size-md="12" size-lg="6" size-xs="12">
           <ion-card  style="padding-left:20px!important;padding-right:20px!important;padding-bottom:0px!important; padding-top:0px!important;">
-            <ion-text style="color:var(--ion-color-secondary);"><h3>¿Transferiste? Adjunta tu comprobante a continuación</h3></ion-text>
+            <ion-text class="fuenteraleway" style="color:var(--ion-color-secondary);"><h3>¿Transferiste? Adjunta tu comprobante a continuación</h3></ion-text>
 
               <div class="content-img">
                 <label  style="cursor:pointer;"  for="input">
@@ -478,7 +478,7 @@
             </div>
             <ion-icon *ngIf="new_url_image" color="success" style="font-size:xx-large;" name="checkmark-circle"></ion-icon>
             <ion-text><h6 class="textodentrodelinea">&nbsp;o también puedes&nbsp;</h6></ion-text>
-            <ion-text style="text-align:center;"><h5>Enviar la constancia por email: operaciones@dollarplus.pe</h5></ion-text>
+            <ion-text class="fuenteraleway" style="text-align:center;"><h5>Enviar la constancia por email: operaciones@dollarplus.pe</h5></ion-text>
           </ion-card>
         </ion-col>
     </ion-row>
@@ -529,7 +529,7 @@
                 
                 <ion-card  style=" padding-left:20px!important;padding-right:20px!important;padding-bottom:0px!important; padding-top:0px!important;">
  
-                  <ion-text style="text-align:center; color:--(--ion-color-secondary) ">
+                  <ion-text class="fuenteraleway" style="text-align:center; color:--(--ion-color-secondary) ">
                     <h2 color="secondary">¡Solicitud enviada!</h2>
                       <h3>Tu operación es la N°{{operacion_enviada_con_foto.id}} y se encuentra en validación de fondos</h3>
 

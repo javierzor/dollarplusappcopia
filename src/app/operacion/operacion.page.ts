@@ -17,6 +17,12 @@ import { DecimalPipe } from '@angular/common';
 })
 export class OperacionPage implements OnInit {
 
+  sort = 'assets/dollarplusrecursos/customsvg/change.svg';
+
+
+
+
+
   @ViewChild('modalpaso2') modalpaso2: IonModal;
   @ViewChild('modalpaso3') modalpaso3: IonModal;
   @ViewChild('campodolaresarecibir') campodolaresarecibir!: ElementRef;
