@@ -1,110 +1,169 @@
 <ion-app (click)="SeClickeoEnLaApp()">
-
-
-
-  <ion-split-pane when="xs" contentId="main">
-
-    <ion-menu (click)="clickparacerrarmenusuperior()" class="ocultar767paraabajo" contentId="main">
+  <ion-split-pane when="md" contentId="main">
+    <ion-menu
+      (click)="clickparacerrarmenusuperior()"
+      side="start"
+      contentId="main"
+    >
       <ion-header>
         <ion-toolbar>
-          <img style="width:160px; height:100%; margin-left:40px;" src="assets/dollarplusrecursos/logo-cabecera-app.svg">
+          <img
+            style="width: 160px; height: 100%; margin-left: 40px"
+            src="assets/dollarplusrecursos/logo-cabecera-app.svg"
+          />
         </ion-toolbar>
       </ion-header>
 
-      
       <ion-content>
-
-        <ion-menu-toggle class="ion-align-items-center"  autoHide="false" >
+        <ion-menu-toggle class="ion-align-items-center" autoHide="false">
           <ion-grid class="ion-align-items-center">
-            <ion-row class="ion-align-items-center" >
+            <ion-row class="ion-align-items-center">
               <ion-col class="ion-align-items-center">
-                <ion-item class="ion-align-items-center" routerLink="/indash/operacion" routerLinkActive="selected" style="cursor: pointer;" routerDirection="root" detail="false">
+                <ion-item
+                  class="ion-align-items-center"
+                  routerLink="/indash/operacion"
+                  routerLinkActive="selected"
+                  style="cursor: pointer"
+                  routerDirection="root"
+                  detail="false"
+                >
                   <!-- <ion-icon slot="start" name="add-outline"></ion-icon> -->
-            
-                  <ion-label class="ion-align-items-center" style=" margin-bottom:32px;" color="primary">
-                    <strong style="font-size:large; border-radius:25px; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-primary);">&nbsp; &#43; &nbsp;</strong>	 Nueva Operación
+
+                  <ion-label
+                    class="ion-align-items-center"
+                    style="margin-bottom: 32px"
+                    color="primary"
+                  >
+                    <strong
+                      style="
+                        font-size: large;
+                        border-radius: 25px;
+                        color: var(--ion-color-secondary);
+                        border: 1px solid var(--ion-color-primary);
+                      "
+                      >&nbsp; &#43; &nbsp;</strong
+                    >
+                    Nueva Operación
                   </ion-label>
                 </ion-item>
               </ion-col>
-        </ion-row>
-        </ion-grid>
-
+            </ion-row>
+          </ion-grid>
         </ion-menu-toggle>
 
-
-
         <ion-list lines="none">
-          <ion-list-header>
-            Mi Cuenta
-          </ion-list-header>
+          <ion-list-header> Mi Cuenta </ion-list-header>
 
           <ion-menu-toggle autoHide="false">
-
-              <ion-item routerLink="/indash/misoperaciones" routerLinkActive="selected" routerDirection="root" detail="false">
-              <ion-icon color="primary" slot="start" name="swap-horizontal"></ion-icon>
-              <ion-label>
-                Mis Operaciones
-              </ion-label>
+            <ion-item
+              routerLink="/indash/misoperaciones"
+              routerLinkActive="selected"
+              routerDirection="root"
+              detail="false"
+            >
+              <ion-icon
+                color="primary"
+                slot="start"
+                name="swap-horizontal"
+              ></ion-icon>
+              <ion-label> Mis Operaciones </ion-label>
             </ion-item>
-
           </ion-menu-toggle>
 
           <ion-menu-toggle autoHide="false">
-            <ion-item routerLink="/indash/cuentas"  routerLinkActive="selected" routerDirection="root" detail="false">
+            <ion-item
+              routerLink="/indash/cuentas"
+              routerLinkActive="selected"
+              routerDirection="root"
+              detail="false"
+            >
               <ion-icon color="primary" slot="start" name="card"></ion-icon>
-              <ion-label>
-                Mis Cuentas
-              </ion-label>
+              <ion-label> Mis Cuentas </ion-label>
             </ion-item>
           </ion-menu-toggle>
 
           <ion-menu-toggle autoHide="false">
-            <ion-item routerLink="/indash/misbeneficios"  routerLinkActive="selected" routerDirection="root" detail="false">
+            <ion-item
+              routerLink="/indash/misbeneficios"
+              routerLinkActive="selected"
+              routerDirection="root"
+              detail="false"
+            >
               <ion-icon color="primary" slot="start" name="trophy"></ion-icon>
-              <ion-label>
-                Mis Beneficios
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-
-
-          <ion-menu-toggle autoHide="false">
-            <ion-item routerLink="/indash/ayudaycontacto"  routerLinkActive="selected" routerDirection="root" detail="false">
-              <ion-icon color="primary" slot="start" name="help-circle"></ion-icon>
-              <ion-label>
-                Ayuda
-              </ion-label>
+              <ion-label> Mis Beneficios </ion-label>
             </ion-item>
           </ion-menu-toggle>
 
           <ion-menu-toggle autoHide="false">
-            <ion-item routerLink="/indash/perfil"  routerLinkActive="selected" routerDirection="root" detail="false">
+            <ion-item
+              routerLink="/indash/ayudaycontacto"
+              routerLinkActive="selected"
+              routerDirection="root"
+              detail="false"
+            >
+              <ion-icon
+                color="primary"
+                slot="start"
+                name="help-circle"
+              ></ion-icon>
+              <ion-label> Ayuda </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item
+              routerLink="/indash/perfil"
+              routerLinkActive="selected"
+              routerDirection="root"
+              detail="false"
+            >
               <ion-icon color="primary" slot="start" name="person"></ion-icon>
-              <ion-label>
-                Perfil
-              </ion-label>
+              <ion-label> Perfil </ion-label>
             </ion-item>
           </ion-menu-toggle>
-
-
-
-
         </ion-list>
 
-
-        
-        <ion-slides [options]="slideOptsOne" lockSwipes="false"  #eslaiderdelmenu paginationType="bullets" pager="true"  scrollbar="true"  autoplay="3500" speed="3000" >
+        <ion-slides
+          [options]="slideOptsOne"
+          lockSwipes="false"
+          #eslaiderdelmenu
+          paginationType="bullets"
+          pager="true"
+          scrollbar="true"
+          autoplay="3500"
+          speed="3000"
+        >
           <ion-slide *ngFor="let menu_promocion of menu_promociones">
-            <ion-card >
-              <div style="position: absolute;top: 45%;left: 16px;font-size: 25px;z-index: 2;" (click)="slidePrev()">
-              <ion-icon name="arrow-back"></ion-icon>
+            <ion-card>
+              <div
+                style="
+                  position: absolute;
+                  top: 45%;
+                  left: 16px;
+                  font-size: 25px;
+                  z-index: 2;
+                "
+                (click)="slidePrev()"
+              >
+                <ion-icon name="arrow-back"></ion-icon>
               </div>
-              <div style="position: absolute;top: 45%;right: 16px;font-size: 25px;z-index: 2;" (click)="slideNext()">
-              <ion-icon name="arrow-forward"></ion-icon>
+              <div
+                style="
+                  position: absolute;
+                  top: 45%;
+                  right: 16px;
+                  font-size: 25px;
+                  z-index: 2;
+                "
+                (click)="slideNext()"
+              >
+                <ion-icon name="arrow-forward"></ion-icon>
               </div>
               <ion-card-content>
-                <ion-img [src]="menu_promocion.promocion1_new_url_image"></ion-img>
-                </ion-card-content>
+                <ion-img
+                  [src]="menu_promocion.promocion1_new_url_image"
+                ></ion-img>
+              </ion-card-content>
             </ion-card>
           </ion-slide>
           <!-- <ion-slide >
@@ -114,7 +173,7 @@
               </div>
               <div style="position: absolute;top: 40%;right: 16px;font-size: 25px;z-index: 2;" (click)="slideNext()">
               <ion-icon name="arrow-forward"></ion-icon>
-              </div>              
+              </div>
               <ion-card-content>
                 <ion-img src="assets/dollarplusrecursos/slides/RecommendationBanner.png"></ion-img>
                 </ion-card-content>
@@ -127,75 +186,141 @@
               </div>
               <div style="position: absolute;top: 40%;right: 16px;font-size: 25px;z-index: 2;" (click)="slideNext()">
               <ion-icon name="arrow-forward"></ion-icon>
-              </div>              
+              </div>
               <ion-card-content>
                 <ion-img src="assets/dollarplusrecursos/slides/InterbankBannerV2.png"></ion-img>
               </ion-card-content>
             </ion-card>
           </ion-slide> -->
-         </ion-slides>
-
-
+        </ion-slides>
       </ion-content>
-
-
-
     </ion-menu>
-  
+
     <div class="ion-page" id="main">
-
-
       <ion-header *ngIf="show_header">
         <!-- <ion-toolbar> -->
-          <ion-toolbar>
-            <img class="ocultar768paraarriba" style="width:160px; height:100%; margin-left:40px;" src="assets/dollarplusrecursos/logo-cabecera-app.svg">
-            <ion-icon class="ocultar768paraarriba" color="primary" style="size:large" size="large" name="notifications" slot="end"></ion-icon>
-            <ion-icon (click)="clickparaabrirmenusuperior()" class="ocultar768paraarriba" color="primary" style="size:large" size="large" name="person-circle" slot="end"></ion-icon>
-            <ion-icon class="ocultar768paraarriba" style="size:large" size="large" name="none" slot="end"></ion-icon>
-            <ion-text (click)="clickparaabrirmenusuperior()" class="ocultar767paraabajo" slot="end" color="secondary" style="text-align:right;margin-right:20px;" *ngIf="profileInfo&&profileInfo.email"><p color="secondary">{{profileInfo.email}} &nbsp;<strong class="flechitamenusuperior">&nbsp; &#709; &nbsp;</strong> </p></ion-text>
-      </ion-toolbar>
+        <ion-toolbar>
+          <div style="display: flex; justify-content: space-between">
+            <img
+              class="ocultar768paraarriba"
+              src="assets/dollarplusrecursos/images/dollarplus-short-logo.svg"
+              style="margin-left: 29px"
+            />
+            <!-- <ion-icon
+              class="ocultar768paraarriba"
+              color="primary"
+              style="size: large"
+              size="large"
+              name="notifications"
+              slot="end"
+            ></ion-icon> -->
+            <!-- <ion-icon
+              (click)="clickparaabrirmenusuperior()"
+              class="ocultar768paraarriba"
+              color="primary"
+              style="size: large"
+              size="large"
+              name="person-circle"
+              slot="end"
+            ></ion-icon> -->
+            <div style="display: flex; gap: 12px; align-items: center">
+              <span
+                *ngIf="profileInfo"
+                style="
+                  color: #333;
+                  text-align: right;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                "
+              >
+                {{
+                  profileInfo.name +
+                    ' ' +
+                    profileInfo.lastname +
+                    ' ' +
+                    profileInfo.lastname2
+                }}
+              </span>
+              <ion-icon
+                (click)="clickparaabrirmenusuperior()"
+                class="ocultar768paraarriba"
+                color="primary"
+                name="chevron-down-outline"
+                style="size: large"
+              ></ion-icon>
+            </div>
+            <!-- <ion-icon
+              class="ocultar768paraarriba"
+              style="size: large"
+              size="large"
+              name="none"
+              slot="end"
+            ></ion-icon> -->
+            <ion-text
+              (click)="clickparaabrirmenusuperior()"
+              class="ocultar767paraabajo"
+              slot="end"
+              color="secondary"
+              style="text-align: right; margin-right: 20px"
+              *ngIf="profileInfo && profileInfo.email"
+              ><p color="secondary">
+                {{ profileInfo.email }} &nbsp;<strong
+                  class="flechitamenusuperior"
+                  >&nbsp; &#709; &nbsp;</strong
+                >
+              </p>
+            </ion-text>
+          </div>
+
+          <ion-buttons slot="end">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+        </ion-toolbar>
         <!-- </ion-toolbar> -->
       </ion-header>
 
-  
-
       <ion-content (click)="clickparacerrarmenusuperior()" class="ion-padding">
-
-        <ion-card *ngIf="menuderechosuperior==true" style="position:absolute; right:0%; top:0%; z-index: 9999;">
+        <ion-card
+          *ngIf="menuderechosuperior == true"
+          style="position: absolute; right: 0%; top: 0%; z-index: 9999"
+        >
           <ion-card-header>
             <ion-card-title>Mi Cuenta</ion-card-title>
             <ion-card-subtitle>Menu de Usuario</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
-                <ion-list>
-                <ion-item (click)="iraperfil()">
-                <ion-label style="cursor: pointer;">Mi perfil</ion-label>
-                </ion-item>
-                <ion-item (click)="iramiscuentas()">
-                <ion-label  style="cursor: pointer;">Mis Cuentas</ion-label>
-                </ion-item>
-                <ion-item (click)="cerrarsesionmenusuperior()" style="cursor: pointer;">
+            <ion-list>
+              <ion-item (click)="iraperfil()">
+                <ion-label style="cursor: pointer">Mi perfil</ion-label>
+              </ion-item>
+              <ion-item (click)="iramiscuentas()">
+                <ion-label style="cursor: pointer">Mis Cuentas</ion-label>
+              </ion-item>
+              <ion-item
+                (click)="cerrarsesionmenusuperior()"
+                style="cursor: pointer"
+              >
                 <ion-label>Salir</ion-label>
-                </ion-item>
-                </ion-list>
-                <br>
-                <ion-icon style="font-size:xx-large; position:absolute;right:0%;bottom:-1%;" name="close-circle"></ion-icon>
+              </ion-item>
+            </ion-list>
+            <br />
+            <ion-icon
+              style="
+                font-size: xx-large;
+                position: absolute;
+                right: 0%;
+                bottom: -1%;
+              "
+              name="close-circle"
+            ></ion-icon>
           </ion-card-content>
         </ion-card>
 
         <ion-router-outlet (activate)="onActivateRoute($event)">
-
-    
-    
         </ion-router-outlet>
-      
       </ion-content>
     </div>
-
-
-
   </ion-split-pane>
-
-
-  
 </ion-app>

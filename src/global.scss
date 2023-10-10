@@ -10,32 +10,32 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+@import '~@ionic/angular/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
 @import '~@ionic/angular/css/display.css';
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
 
 // @import "~@flag-icon-css/sass/flag-icon.scss";
 
 // @import url("assets/dollarplusrecursos/banderas/css/flag-icons.css");
-ion-item{
-.fi-ve {
-  background-color: red;
+ion-item {
+  .fi-ve {
+    background-color: red;
+  }
 }
-}
-ion-item{
-.fi-ve.fis {
-  background-color: red;
-}
+ion-item {
+  .fi-ve.fis {
+    background-color: red;
+  }
 }
 
 @media (max-width: 767px) {
@@ -50,276 +50,262 @@ ion-item{
   }
 }
 
-
-.clasebancosselector{
-  ion-item:nth-child(1) .sc-ion-select-popover-md{
+.clasebancosselector {
+  ion-item:nth-child(1) .sc-ion-select-popover-md {
     // tambien funciona asi:
     // background: url("assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/bcp.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
-  ion-item:nth-child(2) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/interbank.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
-  }
-
-  ion-item:nth-child(3) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/bbva.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(2) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/interbank.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(4) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/scotiabank.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(3) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/bbva.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(5) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/banbif.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(4) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/scotiabank.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(6) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/pichincha.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(5) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/banbif.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(7) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/banco-de-la-nacion.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(6) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/pichincha.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-
-  ion-item:nth-child(8) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/gnb.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(7) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/banco-de-la-nacion.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-
-  ion-item:nth-child(9) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/santander.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(8) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/gnb.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(10) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/mi-banco.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(9) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/santander.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(11) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/falabella.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(10) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/mi-banco.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(12) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/banco-ripley.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(11) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/falabella.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(13) .sc-ion-select-popover-md{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/banco-del-comercio.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(12) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/banco-ripley.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(1) .sc-ion-select-popover-ios{
+  ion-item:nth-child(13) .sc-ion-select-popover-md {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/banco-del-comercio.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
+  }
+
+  ion-item:nth-child(1) .sc-ion-select-popover-ios {
     // tambien funciona asi:
     // background: url("assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
-      background: url("/assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+    background: url('/assets/dollarplusrecursos/iconos-selector-bancos/bcp.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
-  ion-item:nth-child(2) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/interbank.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
-  }
-
-  ion-item:nth-child(3) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/bbva.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(2) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/interbank.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(4) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/scotiabank.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(3) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/bbva.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(5) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/banbif.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(4) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/scotiabank.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(6) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/pichincha.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(5) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/banbif.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(7) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/banco-de-la-nacion.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(6) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/pichincha.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-
-  ion-item:nth-child(8) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/gnb.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(7) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/banco-de-la-nacion.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-
-  ion-item:nth-child(9) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/santander.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(8) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/gnb.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(10) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/mi-banco.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(9) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/santander.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(11) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/falabella.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(10) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/mi-banco.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(12) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/banco-ripley.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(11) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/falabella.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-  ion-item:nth-child(13) .sc-ion-select-popover-ios{
-      background: url("assets/dollarplusrecursos/iconos-selector-bancos/banco-del-comercio.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 0px 27px;
+  ion-item:nth-child(12) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/banco-ripley.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
   }
 
-
-
+  ion-item:nth-child(13) .sc-ion-select-popover-ios {
+    background: url('assets/dollarplusrecursos/iconos-selector-bancos/banco-del-comercio.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 27px;
+  }
 }
 
 ion-button {
-    text-transform: none;
-    --border-radius: 2.5px!important;
-    font-weight: 800;
-  }
+  text-transform: none;
+  --border-radius: 2.5px !important;
+  font-weight: 800;
+}
 
-  // @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  // @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
-  :root {
-    // font-size:8vw;
-    // --ion-font-family: 'Poppins', sans-serif;
-    --ion-font-family: 'Lato';
-        font-weight: 700;
-    /** primary **/
-    }
+:root {
+  // font-size:8vw;
+  // --ion-font-family: 'Poppins', sans-serif;
+  --ion-font-family: 'Lato';
+  font-weight: 700;
+  /** primary **/
+}
 
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-    .fuenteraleway{
-         font-family: 'Raleway', sans-serif!important;
-      --ion-font-family: 'Raleway', sans-serif!important;
-    }
-
+.fuenteraleway {
+  font-family: 'Raleway', sans-serif !important;
+  --ion-font-family: 'Raleway', sans-serif !important;
+}
 
 // fondouscuro y fondoclaro
 .fondoclaro {
-  --ion-background-color:white;
+  --ion-background-color: white;
 }
 
 .fondooscuro {
-    --ion-background-color:black;
+  --ion-background-color: black;
 }
 // fondooscuro y fondo claro
 
-
 .modalfullscreen {
-  --width:100% !important;
-  --height:100% !important;
+  --width: 100% !important;
+  --height: 100% !important;
 }
 
 .tamanootarjetapresentacion {
-  --width:70vh !important;
-  --height:50vh !important;
+  --width: 70vh !important;
+  --height: 50vh !important;
 }
 
+ion-alert.alertas-iniciales {
+  //background color
+  .alert-wrapper.sc-ion-alert-md {
+    background-color: white;
+  }
 
-    ion-alert.alertas-iniciales {
-      //background color
-      .alert-wrapper.sc-ion-alert-md {
-        background-color: white;
+  // Header Text
+  .alert-title.sc-ion-alert-md {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'AustralisProSwash-Italic';
+    color: var(--ion-text-color, #00000080);
+  }
+}
 
-
-      }
-
-      // Header Text
-      .alert-title.sc-ion-alert-md {
-        font-size: 25px;
-        font-weight: 600;
-        font-family: "AustralisProSwash-Italic";
-        color: var(--ion-text-color, #00000080);
-      }
-    }
-
-    ion-select {
-      --placeholder-color	:var(--ion-color-secondary);
-      color:var(--ion-color-primary)!important;
-    }
-
+ion-select {
+  --placeholder-color: var(--ion-color-secondary);
+  color: var(--ion-color-primary) !important;
+}
 
 //loadingdelmono
 .loading-del-mono {
   ion-backdrop {
     background-color: black;
-    opacity: .4 !important;
+    opacity: 0.4 !important;
   }
 
   ion-spinner {
@@ -327,21 +313,19 @@ ion-button {
   }
 }
 
- ion-loading.loading-del-mono {
+ion-loading.loading-del-mono {
   .loading-wrapper {
     // background:  url("assets/dollarplusrecursos/gif/null.gif") no-repeat center !important;
-    width:40vw;
-    height:40vh;
+    width: 40vw;
+    height: 40vh;
     background: transparent !important;
     box-shadow: none !important;
     --spinner-color: #2c2c2c;
     color: #0f0f0f;
-
   }
 }
 
 //loadingdelmono
-
 
 //codigo de la cartica:
 #wrappercartitasconsvg {
@@ -351,7 +335,7 @@ ion-button {
 }
 
 .boxcartitasconsvg {
-  background-color:rgba(0, 0, 0, 0.962);
+  background-color: rgba(0, 0, 0, 0.962);
   height: 17vh;
   width: 17vh;
   box-shadow: 0 0 10px -2px silver;
@@ -361,7 +345,7 @@ ion-button {
   color: #bdc018;
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
-  border: 3px solid rgba(0,0,0,0); /* Invisible Border */
+  border: 3px solid rgba(0, 0, 0, 0); /* Invisible Border */
   transition: all 0.2s;
   padding: 5px;
   position: relative;
@@ -376,7 +360,7 @@ ion-button {
   width: 17.2vh;
   height: 17.2vh;
   padding: 9px;
-  border: solid rgba(0,0,0,0) 2px;
+  border: solid rgba(0, 0, 0, 0) 2px;
   border-radius: 5px;
   top: -7px;
   left: -7px;
@@ -390,7 +374,6 @@ ion-button {
 
 //finaliza el codigo de la cartica
 
-
 // empieza alerta cerrarsalir
 ion-alert.cerrarsalir-alert {
   --backdrop-opacity: 0.7;
@@ -401,32 +384,25 @@ ion-alert.cerrarsalir-alert {
 }
 
 .ios .cerrarsalir-alert button.alert-button {
-  border: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2)
+  border: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2);
 }
 
 // termina alerta cerrarsalir
 
 //empieza alerta con saltos de linea
 
+.alert-radio-label.sc-ion-alert-ios {
+  padding-left: unset;
+  padding-right: unset;
+  -webkit-padding-start: 13px;
+  padding-inline-start: 13px;
+  -webkit-padding-end: 13px;
+  padding-inline-end: 13px;
+  white-space: pre-wrap;
+}
 
-
-
-
-
-  .alert-radio-label.sc-ion-alert-ios {
-    padding-left: unset;
-    padding-right: unset;
-    -webkit-padding-start: 13px;
-    padding-inline-start: 13px;
-    -webkit-padding-end: 13px;
-    padding-inline-end: 13px;
-    white-space: pre-wrap;
-  }
-
-  .alert-radio-label.sc-ion-alert-md {
-
-  }
-
+.alert-radio-label.sc-ion-alert-md {
+}
 
 // clases modal error operacion
 ion-modal.erroroperacion {
@@ -434,8 +410,7 @@ ion-modal.erroroperacion {
   --border-radius: 16px;
 
   &::part(handle) {
-
-}
+  }
 }
 
 ion-modal.agregaralgo {
@@ -444,77 +419,72 @@ ion-modal.agregaralgo {
   --border-radius: 16px;
 
   &::part(handle) {
-
+  }
 }
-}
-
 
 // clases modal error operacion
 
-
-  ion-select.selectorcompletoconsaltos{
-    ion-select-option.alert-radio-label.sc-ion-alert-md {
-      padding-left: unset;
-      padding-right: unset;
-      -webkit-padding-start: 13px;
-      padding-inline-start: 13px;
-      -webkit-padding-end: 13px;
-      padding-inline-end: 13px;
-      white-space: pre-wrap;
-    }
+ion-select.selectorcompletoconsaltos {
+  ion-select-option.alert-radio-label.sc-ion-alert-md {
+    padding-left: unset;
+    padding-right: unset;
+    -webkit-padding-start: 13px;
+    padding-inline-start: 13px;
+    -webkit-padding-end: 13px;
+    padding-inline-end: 13px;
+    white-space: pre-wrap;
   }
+}
 
 //termina alerta con saltos de linea
 
 // selector de cuentas y tarjetas
 #clasehay {
-  font-weight: 900!important;
+  font-weight: 900 !important;
 }
 
-.clasecuentasselector{
-  width:100%!important;
-  height:50vh!important;
-  ion-item:nth-child(n) .sc-ion-select-popover-md{
+.clasecuentasselector {
+  width: 100% !important;
+  height: 50vh !important;
+  ion-item:nth-child(n) .sc-ion-select-popover-md {
     // tambien funciona asi:
-      // background: url("/assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 6px 0px 6px 0px;
-        white-space: normal !important;
-        white-space: pre-line !important;
-        border-radius:4px; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-primary);
-
+    // background: url("/assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 6px 0px 6px 0px;
+    white-space: normal !important;
+    white-space: pre-line !important;
+    border-radius: 4px;
+    color: var(--ion-color-secondary);
+    border: 1px solid var(--ion-color-primary);
   }
-  ion-item:nth-child(n) .sc-ion-select-popover-ios{
+  ion-item:nth-child(n) .sc-ion-select-popover-ios {
     // tambien funciona asi:
-      // background: url("/assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding: 6px 0px 6px 0px;
-      white-space: normal !important;
-        white-space: pre-line !important;
-        border-radius:4px; color:var(--ion-color-secondary); border: 1px solid var(--ion-color-primary);
-
+    // background: url("/assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 6px 0px 6px 0px;
+    white-space: normal !important;
+    white-space: pre-line !important;
+    border-radius: 4px;
+    color: var(--ion-color-secondary);
+    border: 1px solid var(--ion-color-primary);
   }
-
-
 }
 
-
-ion-button.botoncomofab{
-  –border-radius: 20px!important;
-  --border-radius: 20px!important;
-  border-radius: 20px!important;
-
+ion-button.botoncomofab {
+  –border-radius: 20px !important;
+  --border-radius: 20px !important;
+  border-radius: 20px !important;
 }
-
 
 // inicia modalcalendario
 ion-modal.detalles_operacion_completa {
   --height: 60%;
   --width: 80vw;
   --border-radius: 16px;
-  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 ion-modal.detalles_operacion_completa::part(backdrop) {
@@ -528,7 +498,6 @@ ion-modal.detalles_operacion_completa ion-toolbar {
 }
 
 // termina modal calendario
-
 
 // experimentos con tewk
 
@@ -544,7 +513,7 @@ ion-modal.detalles_operacion_completa ion-toolbar {
 
 //admin custom toast
 ion-toast.admin-custom-toast {
-  --background: #F4F4FA;
+  --background: #f4f4fa;
   --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
   --color: #4b4a50;
 }
@@ -560,38 +529,34 @@ ion-toast.admin-custom-toast::part(button) {
 }
 //admin custom toast
 
-
 // selectores de provincia y distrito
 
-.claseselectorprovincia{
-  width:50%!important;
-  height:50%!important;
-
-
+.claseselectorprovincia {
+  width: 50% !important;
+  height: 50% !important;
 }
-.claseselectordistrito{
-  width:50%!important;
-  height:55%!important;
-
+.claseselectordistrito {
+  width: 50% !important;
+  height: 55% !important;
 }
 // provincia y distrito
 
 .button {
   &__submit {
-    --border-radius: 10px!important;
+    --border-radius: 10px !important;
 
     text-align: center !important;
     font-size: 20px !important;
     font-style: normal;
     font-weight: 700 !important;
     line-height: normal;
-    color: #FFF !important;
+    color: #fff !important;
   }
 }
 
 .auth {
   &__title {
-    color: #0B2240;
+    color: #0b2240;
     text-align: center;
     font-size: 31px !important;
     font-style: normal;
@@ -650,5 +615,16 @@ ion-toast.admin-custom-toast::part(button) {
     text-align: center;
     padding-left: 15px !important;
     color: #ffffff;
+  }
+}
+
+.main {
+  &__title {
+    color: #0b2240 !important;
+    text-align: center !important;
+    font-size: 24px !important;
+    font-style: normal;
+    font-weight: 700 !important;
+    line-height: normal;
   }
 }
