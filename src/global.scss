@@ -66,7 +66,7 @@ ion-item{
       background-repeat: no-repeat;
       padding: 0px 27px;
   }
-  
+
   ion-item:nth-child(3) .sc-ion-select-popover-md{
       background: url("assets/dollarplusrecursos/iconos-selector-bancos/bbva.png");
       background-size: 20px;
@@ -160,7 +160,7 @@ ion-item{
       background-repeat: no-repeat;
       padding: 0px 27px;
   }
-  
+
   ion-item:nth-child(3) .sc-ion-select-popover-ios{
       background: url("assets/dollarplusrecursos/iconos-selector-bancos/bbva.png");
       background-size: 20px;
@@ -247,7 +247,7 @@ ion-item{
 ion-button {
     text-transform: none;
     --border-radius: 2.5px!important;
-    font-weight: 800;  
+    font-weight: 800;
   }
 
   // @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -299,7 +299,7 @@ ion-button {
 
 
       }
-    
+
       // Header Text
       .alert-title.sc-ion-alert-md {
         font-size: 25px;
@@ -335,7 +335,7 @@ ion-button {
     background: transparent !important;
     box-shadow: none !important;
     --spinner-color: #2c2c2c;
-    color: #0f0f0f;      
+    color: #0f0f0f;
 
   }
 }
@@ -422,7 +422,7 @@ ion-alert.cerrarsalir-alert {
     padding-inline-end: 13px;
     white-space: pre-wrap;
   }
-  
+
   .alert-radio-label.sc-ion-alert-md {
 
   }
@@ -451,7 +451,7 @@ ion-modal.agregaralgo {
 
 // clases modal error operacion
 
-  
+
   ion-select.selectorcompletoconsaltos{
     ion-select-option.alert-radio-label.sc-ion-alert-md {
       padding-left: unset;
@@ -465,7 +465,7 @@ ion-modal.agregaralgo {
   }
 
 //termina alerta con saltos de linea
-  
+
 // selector de cuentas y tarjetas
 #clasehay {
   font-weight: 900!important;
@@ -508,7 +508,7 @@ ion-button.botoncomofab{
 
 }
 
-    
+
 // inicia modalcalendario
 ion-modal.detalles_operacion_completa {
   --height: 60%;
@@ -548,7 +548,7 @@ ion-toast.admin-custom-toast {
   --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
   --color: #4b4a50;
 }
-    
+
 ion-toast.admin-custom-toast::part(message) {
   font-style: italic;
 }
@@ -575,3 +575,80 @@ ion-toast.admin-custom-toast::part(button) {
 
 }
 // provincia y distrito
+
+.button {
+  &__submit {
+    --border-radius: 10px!important;
+
+    text-align: center !important;
+    font-size: 20px !important;
+    font-style: normal;
+    font-weight: 700 !important;
+    line-height: normal;
+    color: #FFF !important;
+  }
+}
+
+.auth {
+  &__title {
+    color: #0B2240;
+    text-align: center;
+    font-size: 31px !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: normal;
+    margin-bottom: 0;
+  }
+  &__noaccount {
+    color: #383838 !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: normal;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__forgot {
+    color: rgba(0, 0, 0, 0.61) !important;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 700 !important;
+    line-height: normal;
+  }
+  &__registerhere {
+    color: #383838 !important;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: normal;
+    text-align: center !important;
+    text-decoration-line: underline;
+  }
+  &__remind {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__redirect {
+    width: 109px;
+    height: 20px;
+    background: #00ce7c;
+    border-radius: 10px;
+
+    font-weight: 600;
+    font-size: 10px !important;
+    line-height: 12px;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 15px !important;
+    color: #ffffff;
+  }
+}
