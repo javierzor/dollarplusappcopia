@@ -1,12 +1,26 @@
 ion-intl-tel-input {
-    ::ng-deep .ionic-selectable-has-placeholder div.ionic-selectable-value-item 
-    {
-      content: "krt";
+  ::ng-deep .ionic-selectable-has-placeholder div.ionic-selectable-value-item {
+    content: 'krt';
     //   display: inline-block;
-      width: 23px;
-      // background: url("../../assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
-      // background-color: var(--placeholder-color,#777);
-      height: 18px;
-      font-size: 0px;
-    }
+    width: 23px;
+    // background: url("../../assets/dollarplusrecursos/iconos-selector-bancos/bcp.png");
+    // background-color: var(--placeholder-color,#777);
+    height: 18px;
+    font-size: 0px;
   }
+}
+
+ion-card {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@media (max-width: 960px) {
+  ion-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
