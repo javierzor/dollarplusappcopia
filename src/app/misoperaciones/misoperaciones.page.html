@@ -1,16 +1,19 @@
 <ion-content>
   <section *ngIf="this.step=='veroperaciones'">
-    <ion-text style="margin-left: 25px"
-      ><p style="font-size: large; color: var(--ion-color-secondary)">
+    <ion-text style="margin-left: 25px">
+      <p
+        style="font-size: large; color: var(--ion-color-secondary)"
+        class="ion-text-center"
+      >
         &nbsp;&nbsp; <strong>Mis Operaciones</strong>
-      </p></ion-text
-    >
+      </p>
+    </ion-text>
 
     <div (click)="recargaricono()" class="ion-text-center">
       <ion-icon style="transform: rotate(90deg)" name="reload"></ion-icon>
     </div>
 
-    <ion-grid class="ion-text-center" style="width: 100%">
+    <ion-grid class="ion-text-center ion-hide-sm-down" style="width: 100%">
       <ion-card class="ion-text-center" style="width: 100%">
         <ion-card-header color="primary">
           <ion-row>
@@ -46,6 +49,7 @@
               &nbsp;&nbsp; {{cadaoperacion.id}}
             </ion-text>
           </ion-col>
+
           <ion-col (click)="abrir_modal_detalles(cadaoperacion)" size="3.3">
             <ion-text *ngIf="cadaoperacion.quierecomprardolares=='si'"
               ><ion-icon
@@ -81,12 +85,14 @@
               number : '1.2-2'}}</ion-text
             >
           </ion-col>
+
           <ion-col (click)="abrir_modal_detalles(cadaoperacion)" size="2.9">
             <ion-text
               >{{cadaoperacion.fecha_creacion | date: 'dd/MM/yy, hh:mm':'GMT-5'
               }}</ion-text
             >
           </ion-col>
+
           <ion-col (click)="abrir_modal_detalles(cadaoperacion)" size="2.9">
             <ion-text
               *ngIf="cadaoperacion.estado==3"
@@ -115,6 +121,7 @@
               </span>
             </ion-text>
           </ion-col>
+
           <ion-col size="1.1">
             <ion-icon
               (click)="abrir_modal_detalles(cadaoperacion)"
@@ -266,5 +273,10 @@
         >
       </ion-card>
     </ion-grid>
+
+    <app-operation-list
+      [operations]="operaciones"
+      (openModalDetailsEvent)="abrir_modal_detalles($event)"
+    ></app-operation-list>
   </section>
 </ion-content>
