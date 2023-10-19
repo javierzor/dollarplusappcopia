@@ -1,15 +1,14 @@
 <ion-content>
-  <section *ngIf="this.step=='veroperaciones'">
-    <ion-text style="margin-left: 25px">
-      <p
-        style="font-size: large; color: var(--ion-color-secondary)"
-        class="ion-text-center"
-      >
-        &nbsp;&nbsp; <strong>Mis Operaciones</strong>
-      </p>
-    </ion-text>
+  <div style="padding: 40px 40px 15px 40px; text-align: center">
+    <span class="main__title ion-text-center"> Mis operaciones </span>
+  </div>
 
-    <div (click)="recargaricono()" class="ion-text-center">
+  <section *ngIf="this.step=='veroperaciones'">
+    <div
+      (click)="recargaricono()"
+      class="ion-text-center"
+      style="width: 20px; margin: auto; margin-bottom: 16px"
+    >
       <ion-icon style="transform: rotate(90deg)" name="reload"></ion-icon>
     </div>
 

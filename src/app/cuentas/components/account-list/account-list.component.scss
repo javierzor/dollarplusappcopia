@@ -1,9 +1,10 @@
 .text {
   &__label {
     color: var(--ion-color-secondary);
+    color: #0b2240;
     font-size: 14px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: normal;
   }
   &__detail {

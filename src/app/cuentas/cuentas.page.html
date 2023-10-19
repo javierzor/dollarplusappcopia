@@ -1,16 +1,17 @@
 <ion-content>
-  <section *ngIf="this.step=='vercuentas'">
-    <br />
+  <div style="padding: 40px 40px 0 40px; text-align: center">
+    <span class="main__title"> Cuentas Bancarias </span>
+  </div>
+
+  <section *ngIf="this.step=='vercuentas'" class="ion-hide-sm-down">
+    <br class="ion-hide-sm-down" />
 
     <!-- <ion-text style="margin-left:25px;" ><p style=" font-size:large; color: var(--ion-color-secondary)">&nbsp;&nbsp; <strong>Productos Bancarios</strong></p></ion-text> -->
-    <div style="padding: 40px 40px 0 40px; text-align: center">
-      <span class="main__title"> Cuentas Bancarias </span>
-    </div>
 
-    <ion-text style="margin-left: 15px"
+    <ion-text style="margin-left: 15px; border: 1px solid red; margin: 0"
       ><p
         class="ion-padding-bottom ion-padding-start ion-padding-end"
-        style="color: #777777"
+        style="color: #777777; margin-bottom: 0"
       >
         &nbsp;&nbsp;Puedes agregar cuentas bancarias y tarjetas luego cuando
         mientras realizas una operación, podras seleccionar a que cuenta o
@@ -846,4 +847,13 @@
       <ion-col size-md="2" size-lg="3" size-xs="1" size> </ion-col>
     </ion-row>
   </section>
+
+  <br class="ion-hide-sm-up" />
+
+  <app-account-list
+    [accounts]="cuentas_de_usuario"
+    [cards]="tarjetas_de_usuario"
+    (sesionEliminar)="sesion_eliminar($event.value1,$event.value2)"
+    (sesionEditar)="sesion_editar($event.value1,$event.value2)"
+  ></app-account-list>
 </ion-content>

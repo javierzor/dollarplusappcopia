@@ -5,14 +5,14 @@
 >
   <ion-accordion *ngFor="let cadaoperacion of operations" value="first">
     <ion-item slot="header" color="light">
-      <ion-label style="padding: 0 40px"
+      <ion-label class="text__label" style="padding: 0 40px"
         >Operación Nr° {{ cadaoperacion.id }}</ion-label
       >
     </ion-item>
     <div class="ion-padding" slot="content">
       <div
         *ngIf="cadaoperacion.quierecomprardolares == 'si'"
-        style="padding: 0 40px"
+        style="padding: 0 40px; height: 30px"
       >
         <div
           style="
@@ -22,7 +22,7 @@
             align-items: center;
           "
         >
-          <p>Envias</p>
+          <p class="text__detail">Envias</p>
           <div style="display: flex">
             <ion-icon
               color="secondary"
@@ -30,7 +30,7 @@
               name="person"
             ></ion-icon>
             <div>
-              <a style="font-size: x-medium">S/</a>
+              <a class="text__value" style="font-size: x-medium">S/</a>
               {{ cadaoperacion.solesaenviar }}
             </div>
           </div>
@@ -39,7 +39,7 @@
 
       <div
         *ngIf="cadaoperacion.quierecomprardolares == 'si'"
-        style="padding: 0 40px"
+        style="padding: 0 40px; height: 30px"
       >
         <div
           style="
@@ -49,14 +49,14 @@
             align-items: center;
           "
         >
-          <p style="padding: 0">Recibes</p>
+          <p class="text__detail" style="padding: 0">Recibes</p>
           <div style="display: flex">
             <img
               style="width: 15px; height: 15px"
               src="assets/dollarplusrecursos/icon/favicon.png"
             />
             <div>
-              <a style="font-size: x-medium">$</a>
+              <a class="text__value" style="font-size: x-medium">$</a>
               {{ cadaoperacion.recibe | number : '1.2-2' }}
             </div>
           </div>
@@ -66,7 +66,7 @@
       <div (click)="openModalDetails(cadaoperacion)">
         <div
           *ngIf="cadaoperacion.quierecomprardolares == 'no'"
-          style="padding: 0 40px"
+          style="padding: 0 40px; height: 30px"
         >
           <div
             style="
@@ -76,7 +76,7 @@
               align-items: center;
             "
           >
-            <p>Envias</p>
+            <p class="text__detail">Envias</p>
             <div style="display: flex">
               <ion-icon
                 color="secondary"
@@ -84,7 +84,7 @@
                 name="person"
               ></ion-icon>
               <div>
-                <a style="font-size: x-medium">$</a>
+                <a class="text__value" style="font-size: x-medium">$</a>
                 {{ cadaoperacion.dolaresaenviar }}
               </div>
             </div>
@@ -93,7 +93,7 @@
 
         <div
           *ngIf="cadaoperacion.quierecomprardolares == 'no'"
-          style="padding: 0 40px"
+          style="padding: 0 40px; height: 30px"
         >
           <div
             style="
@@ -103,14 +103,14 @@
               align-items: center;
             "
           >
-            <p style="padding: 0">Recibes</p>
+            <p class="text__detail" style="padding: 0">Recibes</p>
             <div style="display: flex">
               <img
                 style="width: 15px; height: 15px"
                 src="assets/dollarplusrecursos/icon/favicon.png"
               />
               <div>
-                <a style="font-size: x-medium">$</a>
+                <a class="text__value" style="font-size: x-medium">$</a>
                 {{ cadaoperacion.recibe | number : '1.2-2' }}
               </div>
             </div>
@@ -118,7 +118,7 @@
         </div>
       </div>
 
-      <div class="" style="padding: 0 40px">
+      <div style="padding: 0 40px; height: 30px">
         <div
           style="
             display: flex;
@@ -127,8 +127,8 @@
             align-items: center;
           "
         >
-          <p style="padding: 0">Fecha</p>
-          <p class="text-right">
+          <p class="text__detail" style="padding: 0">Fecha</p>
+          <p class="text-right text__value">
             {{
               cadaoperacion.fecha_creacion
                 | date
@@ -140,7 +140,7 @@
         </div>
       </div>
 
-      <div style="padding: 0 40px">
+      <div style="padding: 0 40px; height: 30px">
         <div
           style="
             display: flex;
@@ -149,7 +149,7 @@
             align-items: center;
           "
         >
-          <p>Estado</p>
+          <p class="text__detail">Estado</p>
           <div>
             <div (click)="openModalDetails(cadaoperacion)" size="2.9">
               <ion-text
@@ -194,7 +194,7 @@
             align-items: center;
           "
         >
-          <p>Ver detalle</p>
+          <p class="text__detail">Ver detalle</p>
           <ion-icon
             (click)="openModalDetails(cadaoperacion)"
             size="medium"
