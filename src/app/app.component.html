@@ -28,10 +28,10 @@
           <p class="drawer__title ion-text-end">Bienvenido</p>
           <p class="drawer__subtitle ion-text-end">
             {{
-              profileInfo.name +
-                ' ' +
-                profileInfo.lastname +
-                profileInfo.lastname2
+              profileInfo?.name ??
+                '' + ' ' + profileInfo?.lastname ??
+                '' + profileInfo?.lastname2 ??
+                ''
             }}
           </p>
         </div>
