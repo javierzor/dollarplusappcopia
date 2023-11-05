@@ -4,7 +4,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import {DecimalPipe} from '@angular/common';
-import { IonIntlTelInputModule } from 'ion-intl-tel-input';
+// import { IonIntlTelInputModule } from 'ion-intl-tel-input';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [AppComponent],
   imports: [BrowserModule, 
     HttpClientModule,
-    IonIntlTelInputModule,
+    
 
     IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },CurrencyPipe, DecimalPipe],

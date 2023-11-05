@@ -3,9 +3,6 @@
 
 /** Ionic CSS Variables **/
 :root {
-
-  // --ion-background-color:black;
-
   /** primary **/
 	--ion-color-primary: #24CE7B;
 	--ion-color-primary-rgb: 36,206,123;
@@ -236,4 +233,12 @@
 
 //     --ion-card-background: #1e1e1e;
 //   }
+// }
+
+// html {
+//   /* 
+//    * For more information on dynamic font scaling, visit the documentation:
+//    * https://ionicframework.com/docs/layout/dynamic-font-scaling
+//    */
+//   --ion-dynamic-font: var(--ion-default-dynamic-font);
 // }

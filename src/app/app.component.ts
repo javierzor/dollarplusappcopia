@@ -5,7 +5,7 @@ import { NavigationEnd, Router } from '@angular/router'
 import {
   AlertController,
   Platform,
-  IonSlides,
+  // IonSlides,
   MenuController,
 } from '@ionic/angular'
 
@@ -15,7 +15,7 @@ import {
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  @ViewChild('eslaiderdelmenu') slides: IonSlides
+  // @ViewChild('eslaiderdelmenu') slides: IonicSlides
 
   // static mostrar_cabecera:boolean = true;
   // public classReference = AppComponent;
@@ -182,12 +182,12 @@ export class AppComponent {
     this.menuderechosuperior = false
   }
 
-  slidePrev() {
-    this.slides.slidePrev()
-  }
-  slideNext() {
-    this.slides.slideNext()
-  }
+  // slidePrev() {
+  //   this.slides.slidePrev()
+  // }
+  // slideNext() {
+  //   this.slides.slideNext()
+  // }
 
   initializeApp() {
     this.platform.ready().then(() => {})

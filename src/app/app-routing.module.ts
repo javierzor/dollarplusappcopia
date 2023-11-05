@@ -57,10 +57,6 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'modalendesarrollo',
-    loadChildren: () => import('./modals/modalendesarrollo/modalendesarrollo.module').then( m => m.ModalendesarrolloPageModule)
-  },
-  {
     path: 'tarjetapresentacion',
     loadChildren: () => import('./modals/tarjetapresentacion/tarjetapresentacion.module').then( m => m.TarjetapresentacionPageModule)
   },

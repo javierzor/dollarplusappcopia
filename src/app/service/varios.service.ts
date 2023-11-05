@@ -3,7 +3,6 @@ import { ToastController, LoadingController, ModalController } from "@ionic/angu
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import * as CryptoJS from 'crypto-js';
 import { Router } from '@angular/router';
-import { ModalendesarrolloPage } from '../modals/modalendesarrollo/modalendesarrollo.page';
 @Injectable({
   providedIn: 'root'
 })
@@ -27,6 +26,7 @@ export class VariosService {
   temporal_soles_a_enviar: any;
   temporal_dolares_a_recibir: any;
   temporal_dolares_a_enviar: any;
+  pais_seleccionado_con_bandera: { name: string; code: string; iso: string; flag: string; mask: string; };
 
   constructor(
     private modalController: ModalController,
@@ -117,7 +117,7 @@ export class VariosService {
     if (loadingodismiss && loadingodismiss == 'present') {
       this.loadingmono = await this.loadingController.create({
         duration: 8000,
-        message: '<ion-img src="assets/dollarplusrecursos/gif/cargando-colores.gif" alt="loading..."></ion-img>',
+        message: ' ',
         cssClass: 'loading-del-mono',
         spinner: null,
       })
@@ -143,31 +143,13 @@ export class VariosService {
   async MostrarYOcultarAlertaMono2segundos() {
     this.loadingmono = await this.loadingController.create({
       duration: 1600,
-      message: '<ion-img src="assets/dollarplusrecursos/gif/cargando-colores.gif" alt="loading..."></ion-img>',
+      message: ' ',
       cssClass: 'loading-del-mono',
       spinner: null,
     });
     this.loadingmono.present();
   }
-  async global_modal_en_desarrollo() {
-    this.periodo_pausado_de_modal_en_desarrollo = true;
-    setTimeout(() => {
-      this.periodo_pausado_de_modal_en_desarrollo = false;
-    },
-      4000);
-    if (this.periodo_pausado_de_modal_en_desarrollo) {
-      const modal = await this.modalController.create({
-        component: ModalendesarrolloPage,
-        cssClass: 'modalfullscreen',
-        componentProps: {
-          dataparaelmodal: 'vacio'
-        },
-      });
-      modal.onDidDismiss().then((data) => {
-      });
-      return await modal.present();
-    }
-  }
+
   BorrarHistorialNoBackButtonWPAExploradoresBrowser() {
     history.pushState(null, document.title, location.href);
     window.addEventListener('popstate', function (event) {

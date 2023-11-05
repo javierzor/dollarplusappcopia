@@ -20,8 +20,6 @@ log.txt
 # Ionic
 /.ionic
 /www
-/android
-/ios
 /platforms
 /plugins
 
@@ -70,4 +68,3 @@ testem.log
 Thumbs.db
 
 resources/android/**/*
-/.vscode

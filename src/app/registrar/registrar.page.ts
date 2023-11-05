@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core'
+import { Component, OnInit, ViewChild, Input } from '@angular/core'
 import * as CryptoJS from 'crypto-js'
 import { VariosService } from '../service/varios.service'
 import { PaisesService } from '../service/paises.service'
@@ -26,9 +26,11 @@ import { DistritosService } from '../service/distritos.service'
 import { PersonapoliticaPage } from '../modals/personapolitica/personapolitica.page'
 // import { setOptions, getJson , localeEs } from '@mobiscroll/angular-lite';
 
-import { IonIntlTelInputModule } from 'ion-intl-tel-input'
+// import { IonIntlTelInputModule } from 'ion-intl-tel-input'
 // import "../../assets/dollarplusrecursos/banderas/css";
 import { HttpClient } from '@angular/common/http'
+import { PhonewithflagsService } from '../service/phonewithflags.service'
+import { Item } from '../components/typeahead/types'
 
 @Component({
   selector: 'app-registrar',
@@ -43,6 +45,8 @@ export class RegistrarPage implements OnInit {
     internationalNumber: '',
     nationalNumber: '',
   }
+
+
 
   country_code: any
   defaultCountryIsoTest = 'pe'
@@ -63,8 +67,9 @@ export class RegistrarPage implements OnInit {
 
   // termina el codigo de selector de pais
 
-  @ViewChild(IonModal) modal_errores: IonModal
-  @ViewChild('toggle_persona') el_toggle: IonToggle
+  @ViewChild('modalerrores') modal_errores: IonModal;
+  @ViewChild('toggle_persona') el_toggle: IonToggle;
+  @ViewChild('modalfiltropaises') modal_filtro_paises: IonModal;
 
   departamentos = DepartamentosService.departamentosdata
   provincias = ProvinciasService.provincias
@@ -110,7 +115,14 @@ export class RegistrarPage implements OnInit {
   representante_dato_1: any
   representante_dato_2: any
   representante_dato_3: any
-  razon_social: any
+  razon_social: any;
+  // variables PARA EL SEARCHBAR DEL MODAL filtro
+  valores_codigos_banderas: any = this.matriz_codigos.codigosconbanderas;
+  public results = [...this.valores_codigos_banderas];
+  // variables PARA EL SEARCHBAR DEL MODAL filtro
+  numerosinpais: string;
+  numerocompletooo: string
+
   constructor(
     private http: HttpClient,
     public menuCtrl: MenuController,
@@ -123,10 +135,19 @@ export class RegistrarPage implements OnInit {
     private route: ActivatedRoute,
     private alertController: AlertController,
     public formBuilder: FormBuilder,
-    public modalController: ModalController
+    public modalController: ModalController,
+    public matriz_codigos: PhonewithflagsService
   ) {
     console.log('Bienvenido')
-    this.countryData = this.paises.countryData
+    this.countryData = this.paises.countryData;
+    this.varios.pais_seleccionado_con_bandera = {
+      name: 'Peru',
+      code: '+51',
+      iso: 'PE',
+      flag: 'https://cdn.kcak11.com/CountryFlags/countries/pe.svg',
+      mask: '(###)###-###'
+
+    }
     this.comprobarSiFueReferido()
   }
   comprobarSiFueReferido() {
@@ -525,7 +546,18 @@ export class RegistrarPage implements OnInit {
     }
   }
 
+  CHANGEcelularrr2(){
+    this.updateusuario1.controls['celular'].setValue(this.varios.pais_seleccionado_con_bandera +' '+ this.numerosinpais);
+    console.log('celular',this.varios.pais_seleccionado_con_bandera +' '+ this.numerosinpais);
+    console.log('form celular', this.updateusuario2.controls['celular']);
+    this.numerocompletooo= this.varios.pais_seleccionado_con_bandera +' '+ this.numerosinpais;
+  }
+
+
   enviarregistrocompletadoFULListo() {
+
+
+
     if ((this.politicamente_expuesta = false)) {
       this.nombre_politico = undefined
       this.institucion_politica = undefined
@@ -554,7 +586,7 @@ export class RegistrarPage implements OnInit {
         this.profileInfo = this.decrypt(this.profileInfo)
         this.profileInfo = JSON.parse(this.profileInfo)
       }
-
+   
       var datadollarplusappcompletandoregistro = {
         nombre_solicitud: 'dollarplusactualizarperfilcompleto',
         id: this.profileInfo.id,
@@ -569,7 +601,7 @@ export class RegistrarPage implements OnInit {
         lastname: this.updateusuario1.value.lastname,
         lastname2: this.updateusuario1.value.lastname2,
         referidor: this.updateusuario1.value.referidor,
-        celular: this.updateusuario1.value.celular.internationalNumber,
+        celular: this.numerocompletooo,
 
         fecha_nacimiento: this.updateusuario2.value.fecha_nacimiento,
         genero: this.updateusuario2.value.genero,
@@ -670,4 +702,39 @@ export class RegistrarPage implements OnInit {
   ChangeEmpresa() {
     this.updateusuario1.value.es_empresa = this.es_empresa
   }
+
+
+    // FILTROS de numeros flags
+    abrir_modal_filtro_paises(){
+      this.modal_filtro_paises.present();
+    }
+
+    cerrar_modal_filtro_paises(){
+      this.modal_filtro_paises.dismiss();
+    }
+
+    searchbarInput(ev) {
+      this.filterList(ev.target.value);
+    }
+
+    filterList(searchQuery: string | undefined) {
+      if (searchQuery === undefined) {
+        this.results = [...this.valores_codigos_banderas];
+      } else {
+        const normalizedQuery = searchQuery;
+        this.results = this.valores_codigos_banderas.filter((item) => {
+          return item['name'].toLowerCase().includes(normalizedQuery);
+
+        });
+        console.log('this.results',this.results)
+      }
+    }
+  
+    SetValueeexd(item){
+      // this.selectionChange.emit(item);
+      this.varios.pais_seleccionado_con_bandera=item;
+      this.cerrar_modal_filtro_paises();
+    }   
+    // FILTROS de numeros flags
+  
 }
