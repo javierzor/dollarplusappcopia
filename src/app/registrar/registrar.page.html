@@ -463,7 +463,6 @@
                     formControlName="tipo_documento"
                     interface="popover"
                     style="
-                      width: 100%;
                       border-radius: 6px;
                       color: var(--ion-color-secondary);
                       border: 1px solid var(--ion-color-primary);
@@ -601,7 +600,7 @@
                       <ion-content color="light" class="ion-padding">
                         <ion-list id="modal-list" [inset]="true">
                           <ion-item *ngFor="let item of results" (click)="SetValueeexd(item)">
-                            <ion-checkbox [value]="item.value" 
+                            <ion-checkbox [value]="item.value"
                               ><img src={{item.flag}} width="25px" height="12.5px"> {{ item.name }} {{ item.code }}</ion-checkbox
                             >
                           </ion-item>

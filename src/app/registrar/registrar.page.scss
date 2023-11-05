@@ -6,15 +6,15 @@
     * {
         font-size: 2.2vh;
       }
-      
+
       :root {
         font-size: 2.2vh;
-        
+
       }
-    
-    
-    
-    
+
+
+
+
       ion-item {
         --border-color: white; // default underline color
         --highlight-color-invalid: red; // invalid underline color
@@ -25,26 +25,26 @@
 ion-modal {
     --height: 55%;
     --border-radius: 16px;
-  
+
     &::part(handle) {
-  
+
   }
 }
-    
-    
+
+
     // #somelement {
     //     position: absolute;
     //     left: 50%;
     //     -webkit-transform: translateX(-50%);
     //     transform: translateX(-50%)
     //     }
-    
-    
+
+
         ion-item {
       --border-color: var(--ion-color-secondary, #fbb000);
     }
-    
-    
+
+
     // empieza el tooltip
     .tooltip-toggle::before {
       position: absolute;
@@ -60,7 +60,7 @@ ion-modal {
       -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease;
       width: 160px;
-     
+
     .tooltip-toggle::after {
       position: absolute;
       z-index:9999;
@@ -83,7 +83,7 @@ ion-modal {
   -webkit-transition: all 0.75s ease;
   transition: all 0.75s ease;
 }
- 
+
 .tooltip-toggle::before,
 .tooltip-toggle::after {
   color: #efefef;
@@ -94,4 +94,17 @@ ion-modal {
   text-align: center;
 }
 
-    // termina tooltip
+ion-input {
+  --padding-start: 10px;
+}
+
+ion-select{
+  --padding-start: 10px;
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+ion-select label {
+  min-width: 100% !important;
+}
