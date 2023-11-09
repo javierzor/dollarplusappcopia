@@ -114,7 +114,7 @@
                     color: var(--ion-color-secondary);
                     border: 1px solid var(--ion-color-primary);
                   "
-                  placeholder="apaza199@gmail.com"
+                  placeholder="Coloque su email"
                 ></ion-input>
               </div>
 
@@ -287,7 +287,7 @@
                 </div>
               </div>
 
-              <ion-modal
+              <ion-modal #modalerrores
                 trigger="open-modal"
                 [initialBreakpoint]="1"
                 [breakpoints]="[0, 1]"
@@ -463,7 +463,6 @@
                     formControlName="tipo_documento"
                     interface="popover"
                     style="
-                      width: 100%;
                       border-radius: 6px;
                       color: var(--ion-color-secondary);
                       border: 1px solid var(--ion-color-primary);
@@ -563,7 +562,7 @@
                   style="display: flex; flex-direction: column"
                 >
                   <ion-label style="margin-bottom: 8px" color="secondary"
-                    >Apellido Materno (Opcional):</ion-label
+                    >Celular:</ion-label
                   >
                   <ion-item
                     inline
@@ -576,18 +575,42 @@
                       border: 1px solid var(--ion-color-primary);
                     "
                   >
-                    <!-- <ion-label class="ion-no-padding" no-padding>+51</ion-label>
-                    <ion-input class="ion-no-padding" no-padding type="number" formControlName="celular"
-                      placeholder="Teléfono"></ion-input> -->
-                    <!--
-                      <ion-select>
-                        <ion-select-option *ngFor="let cc of currencyList" value="{{ cc.name }}">
-                          <span style="background-color:red"><img src="assets/dollarplusrecursos/iconos-selector-bancos/interbank.png"></span>
-                          {{ cc.name }}
-                        </ion-select-option>
-                      </ion-select> -->
 
-                    <ion-intl-tel-input
+
+                      <div slot="start" id="paises">{{this.varios.pais_seleccionado_con_bandera.code}}</div>
+                      <ion-input (ionChange)="CHANGEcelularrr2()" [(ngModel)]="numerosinpais"></ion-input>
+
+                  <ion-modal trigger="paises" #modalfiltropaises >
+                    <ng-template>
+
+                      <ion-header>
+                        <ion-toolbar>
+                          <ion-buttons slot="start">
+                          </ion-buttons>
+                          <ion-title>Seleccione Pais</ion-title>
+                          <ion-buttons slot="end">
+                          </ion-buttons>
+                        </ion-toolbar>
+                        <ion-toolbar>
+                          <ion-searchbar (ionInput)="searchbarInput($event)"></ion-searchbar>
+                        </ion-toolbar>
+                      </ion-header>
+
+
+                      <ion-content color="light" class="ion-padding">
+                        <ion-list id="modal-list" [inset]="true">
+                          <ion-item *ngFor="let item of results" (click)="SetValueeexd(item)">
+                            <ion-checkbox [value]="item.value"
+                              ><img src={{item.flag}} width="25px" height="12.5px"> {{ item.name }} {{ item.code }}</ion-checkbox
+                            >
+                          </ion-item>
+                        </ion-list>
+                      </ion-content>
+
+                    </ng-template>
+                  </ion-modal>
+
+                    <!-- <ion-intl-tel-input
                       required
                       id="countrycode"
                       name="countrycode"
@@ -604,7 +627,7 @@
                       [modalShouldFocusSearchbar]="modalShouldFocusSearchbar"
                       [modalSearchFailText]="modalSearchFailText"
                     >
-                    </ion-intl-tel-input>
+                    </ion-intl-tel-input> -->
                   </ion-item>
                 </div>
               </div>
@@ -686,7 +709,7 @@
                   >
                 </ion-col>
               </ion-row>
-              <ion-modal
+              <ion-modal #modalerrores
                 trigger="open-modal-2"
                 [initialBreakpoint]="1"
                 [breakpoints]="[0, 1]"
@@ -1342,7 +1365,7 @@
                   >
                 </ion-col>
               </ion-row>
-              <ion-modal
+              <ion-modal #modalerrores
                 trigger="open-modal-2"
                 [initialBreakpoint]="1"
                 [breakpoints]="[0, 1]"

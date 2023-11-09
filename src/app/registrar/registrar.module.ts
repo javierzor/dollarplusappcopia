@@ -5,19 +5,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { RegistrarPageRoutingModule } from './registrar-routing.module';
-import { IonIntlTelInputModule } from 'ion-intl-tel-input';
+// import { IonIntlTelInputModule } from 'ion-intl-tel-input';
 
 import { RegistrarPage } from './registrar.page';
+import { TypeaheadComponent } from '../components/typeahead/typeahead.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    IonIntlTelInputModule,
+    // IonIntlTelInputModule,
     FormsModule,
     IonicModule,
     RegistrarPageRoutingModule
   ],
-  declarations: [RegistrarPage]
+  declarations: [RegistrarPage, TypeaheadComponent]
 })
 export class RegistrarPageModule {}

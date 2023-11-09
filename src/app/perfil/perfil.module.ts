@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonIntlTelInputModule } from 'ion-intl-tel-input';
+// import { IonIntlTelInputModule } from 'ion-intl-tel-input';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -13,7 +13,7 @@ import { PerfilPage } from './perfil.page';
   imports: [
     CommonModule,
     FormsModule,
-    IonIntlTelInputModule,
+    // IonIntlTelInputModule,
     IonicModule,
     PerfilPageRoutingModule
   ],
