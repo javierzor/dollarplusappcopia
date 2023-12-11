@@ -113,17 +113,20 @@
     <div class="my-benefits__detail">
       <span>
         Los créditos ganados varían según el monto cambiado por la persona o
-        empresa. Revisar los <a target="blank" href="https://www.dollarplus.pe/">términos y condiciones</a>para mayor información.
+        empresa. Revisar los&ensp;<a target="blank" href="https://www.dollarplus.pe/">términos y condiciones</a>&ensp;para mayor información.
       </span>
     </div>
 
     <div class="social-networks">
+
+      <!-- EMAIL -->
       <svg
         width="34"
         height="34"
         viewBox="0 0 34 34"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        (click)="shareApp('EMAIL')"
       >
         <path
           d="M28.4902 0H5.02769C2.25097 0 0 2.25097 0 5.02769V28.4902C0 31.2669 2.25097 33.5179 5.02769 33.5179H28.4902C31.2669 33.5179 33.5179 31.2669 33.5179 28.4902V5.02769C33.5179 2.25097 31.2669 0 28.4902 0Z"
@@ -156,6 +159,7 @@
         viewBox="0 0 34 34"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        (click)="shareApp('FACEBOOK')"
       >
         <path
           d="M28.6113 0H5.14878C2.37207 0 0.121094 2.25097 0.121094 5.02769V28.4902C0.121094 31.2669 2.37207 33.5179 5.14878 33.5179H28.6113C31.388 33.5179 33.639 31.2669 33.639 28.4902V5.02769C33.639 2.25097 31.388 0 28.6113 0Z"
@@ -166,7 +170,8 @@
           fill="white"
         />
       </svg>
-      <svg
+      <!-- INSTAGRAM -->
+      <!-- <svg
         width="34"
         height="34"
         viewBox="0 0 34 34"
@@ -241,12 +246,15 @@
           </radialGradient>
         </defs>
       </svg>
+       -->
+      <!-- TWITTER -->
       <svg
         width="34"
         height="34"
         viewBox="0 0 34 34"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        (click)="shareApp('TWITTER')"
       >
         <path
           d="M28.8516 0H5.38902C2.6123 0 0.361328 2.25097 0.361328 5.02769V28.4902C0.361328 31.2669 2.6123 33.5179 5.38902 33.5179H28.8516C31.6283 33.5179 33.8792 31.2669 33.8792 28.4902V5.02769C33.8792 2.25097 31.6283 0 28.8516 0Z"
@@ -257,13 +265,15 @@
           fill="white"
         />
       </svg>
-      <a href="https://wa.me/51998765353" target="_blank">
+
+      <!-- WHATSAPP -->
         <svg
           width="34"
           height="34"
           viewBox="0 0 34 34"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          (click)="shareApp('WHATSAPP')"
         >
           <path
             d="M28.9726 0H5.51011C2.73339 0 0.482422 2.25097 0.482422 5.02769V28.4902C0.482422 31.2669 2.73339 33.5179 5.51011 33.5179H28.9726C31.7494 33.5179 34.0003 31.2669 34.0003 28.4902V5.02769C34.0003 2.25097 31.7494 0 28.9726 0Z"
@@ -280,7 +290,6 @@
             fill="white"
           />
         </svg>
-      </a>
     </div>
 
     <div class="my-benefits__share">

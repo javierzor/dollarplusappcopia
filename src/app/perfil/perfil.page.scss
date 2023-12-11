@@ -18,6 +18,10 @@ ion-card {
   box-shadow: none;
 }
 
+ion-input {
+  --padding-start: 12px;
+}
+
 @media (max-width: 960px) {
   ion-card {
     padding-left: 0;

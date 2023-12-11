@@ -16,9 +16,9 @@ export class MisbeneficiosPage implements OnInit {
     private router: Router,
 
 
-    
 
-  ) 
+
+  )
   { }
 
   ngOnInit() {
@@ -84,7 +84,19 @@ decrypt(textToDecrypt : string){
 }
 
 
+  shareApp (name: string) {
 
-
-
+    if (name === 'FACEBOOK') {
+      window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.dollarplus.app%26pcampaignid%3Dweb_share', '_blank');
+    }
+    if (name === 'TWITTER') {
+      window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.dollarplus.app%26pcampaignid%3Dweb_share&via=GooglePlay&text=%C3%89chale%20un%20vistazo%20a%20%22Dollar%20plus%22', '_blank')
+    }
+    if (name === 'WHATSAPP') {
+      window.open('https://api.whatsapp.com/send/?text=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.dollarplus.app%26pcampaignid%3Dweb_share&type=custom_url', '_blank')
+    }
+    if (name === 'EMAIL') {
+      window.open('https://play.google.com/store/apps/details?id=com.dollarplus.app&pcampaignid=web_share', '_blank')
+    }
+  }
 }
