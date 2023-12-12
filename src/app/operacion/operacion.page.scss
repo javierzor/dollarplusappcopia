@@ -9,8 +9,8 @@ ion-button.botonredondo {
     padding-left:23px;
 }
 .input-dolar.right input {
-    padding-right:23px;
-    text-align:end; 
+    padding-right: 23px;
+    text-align:end;
 }
 
 .input-dolar:before {
@@ -35,7 +35,7 @@ ion-button.botonredondo {
 }
 .input-soles.right input {
     padding-right:26px;
-    text-align:end; 
+    text-align:end;
 }
 
 .input-soles:before {
@@ -71,13 +71,13 @@ ion-button.botonredondo {
     .sinflechitas {
         -webkit-appearance: none;
     }
-    
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
-    
+
     /* Firefox */
     input[type=number] {
       -moz-appearance: textfield;
@@ -127,37 +127,47 @@ $text-padding: 10px; // Expanded only to prevent longer step text overlapping
 .steps {
   // Automagical counting
 	counter-reset: counter;
-  
+
   // Reset list styles
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
-  
+
   // Make pretty
-  margin-left: 15px;
+  margin-left: 30px;
   li {
     margin: $step-spacing 0;
+    &:first-child a {
+      margin-left: -10px;
+    }
+    &:nth-child(2) a {
+      margin-left: -15px;
+    }
+    &:nth-child(3) span {
+      margin-left: -21px;
+    }
+
     &:before {
       // Count number
       content: counter(counter);
       counter-increment: counter;
-      
+
       // Location
       float: left;
       margin-right: -$step-wh;
-      
+
       // Sizing
       box-sizing: border-box;
       display: inline-block;
       width: $step-wh;
       height: $step-wh;
       @if $step-rounded {
-        border-radius: 100%;        
+        border-radius: 100%;
       }
       @if $step-border {
-        border: $step-border-thick solid $step-border-color;        
+        border: $step-border-thick solid $step-border-color;
       }
-      
+
       // Text
       color: $step-color;
       text-align: center;
@@ -165,28 +175,28 @@ $text-padding: 10px; // Expanded only to prevent longer step text overlapping
       line-height: $step-font-size;
       padding-top: (($step-wh - $step-font-size) / 2);
       padding-bottom: (($step-wh - $step-font-size) / 2);
-      
+
       // Make pretty
        background-color: $step-past-bg;
     }
     &.active {
       &:before {
         background-color: $step-present-bg;
-      } 
+      }
     }
     &.active ~ li {
       &:before {
         background-color: $step-future-bg;
-      } 
+      }
     }
     a, span {
       // Remove link styling
       text-decoration: none;
-      
+
       // Sizing
       display: inline-block;
       padding-left: ($step-wh + 10px);
-      
+
       // Text
       color: $text-color;
       font-size: $text-font-size;
@@ -207,7 +217,7 @@ $text-padding: 10px; // Expanded only to prevent longer step text overlapping
     li {
       // Sizing
       width: calc(100% / #{$step-count-per-row});
-      
+
       // Location
       position: relative;
       &:before {
@@ -215,23 +225,23 @@ $text-padding: 10px; // Expanded only to prevent longer step text overlapping
         float: none;
         margin-right: 0;
       }
-      
+
       &:after {
         // Display
         content: '';
         display: inline-block;
-        
+
         // Location
         position: absolute;
         top: ($step-wh / 2);
         left: ($step-wh - 5px);
         transform: translateY(-50%);
         z-index: -1;
-        
+
         // Size
         height: $bar-height;
         width: calc(100% - #{$step-wh - 10px});
-        
+
         // Make pretty
         border-radius: 5px;
         background-color: $bar-past-bg;
@@ -314,10 +324,10 @@ $text-padding: 10px; // Expanded only to prevent longer step text overlapping
           visibility: hidden;
           position: absolute;
       }
-    
-      
+
+
     }
-    
+
     .v2-badge {
       padding: 3px 8px;
       font-weight: 600;
@@ -325,14 +335,14 @@ $text-padding: 10px; // Expanded only to prevent longer step text overlapping
       border-radius: 10px;
       white-space: nowrap;
     }
-  
-  
+
+
     .v2-badge-compra {
       color: white;
       background-color: var(--ion-color-primary);
     }
 
-      
+
     .v2-badge-venta {
       color: white;
       background-color: var(--ion-color-secondary);

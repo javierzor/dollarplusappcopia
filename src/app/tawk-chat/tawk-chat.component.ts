@@ -1,6 +1,7 @@
 
 import {Component, Inject, Input, OnDestroy, OnInit, Renderer2} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tawk-chat',
@@ -9,13 +10,24 @@ import {DOCUMENT} from '@angular/common';
 })
 export class TawkChatComponent implements OnInit {
 
-  @Input() id: string;
+  // @Input() id: string;
   script = this._renderer.createElement('script');
 
-  constructor(private _renderer: Renderer2, @Inject(DOCUMENT) private _document, ) {}
+  // showButton: boolean = false;
+  id: string = '63d7574fc2f1ac1e203046e2'
+
+  constructor(
+    private _renderer: Renderer2,
+    @Inject(DOCUMENT) private _document,
+  ) {}
 
   ngOnInit() {
-    this.script.text = `var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    this.initializeChat()
+  }
+
+  async initializeChat() {
+    this.script.text = `
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
       var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
       s1.async = true;
@@ -26,8 +38,4 @@ export class TawkChatComponent implements OnInit {
     })();`;
     this._renderer.appendChild(this._document.body, this.script);
   }
-
-
-
-  
 }

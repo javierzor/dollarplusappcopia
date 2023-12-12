@@ -22,6 +22,7 @@ export class MisoperacionesPage implements OnInit {
   profileInfo: any;
   operaciones: any;
   dataparaelmodal: any;
+  loadingOperations: boolean = true;
 
   constructor(
     private modalController: ModalController,
@@ -37,14 +38,11 @@ export class MisoperacionesPage implements OnInit {
   }
 
   ionViewWillEnter(){
-
     this.varios.ConsultarUsuarioMayorANumero1().subscribe(async( res: any ) =>{
       console.log('res x service en vista', res);
       this.profileInfo=res;
       this.ConsultarOperacionesDeUsuario(res);
     });
-    
-
   }
 
 
@@ -56,8 +54,8 @@ export class MisoperacionesPage implements OnInit {
     this.varios.variasfunciones(datadollarplususuariostraeroperaciones).subscribe(async( res: any ) =>{
       console.log('res d dollarplususuariostraeroperaciones', res);
       this.operaciones=res;
-  });
-
+      this.loadingOperations = false;
+    });
 }
 
 
@@ -79,8 +77,8 @@ en_desarrollo(){
 recargaricono(){
   this.varios.presentToast('Actualizando...');
   this.ionViewWillEnter();
-  
- 
+
+
 }
 
 
@@ -88,13 +86,13 @@ recargaricono(){
 actualizaroperaciones(event){
   this.varios.presentToast('Actualizando...');
   this.ionViewWillEnter();
-  
+
   setTimeout(() => {
     // Any calls to load data go here
     event.target.complete();
   }, 3000);
 
-  
+
 }
 
 }

@@ -1,9 +1,21 @@
 <ion-content>
   <div style="padding: 40px 40px 15px 40px; text-align: center">
-    <span class="main__title ion-text-center"> Mis operaciones </span>
+    <span class="main__title ion-text-center"> Mis operaciones</span>
   </div>
 
-  <section *ngIf="this.step=='veroperaciones'">
+  <div *ngIf="loadingOperations">
+    <div *ngFor="let i of [1, 1, 1, 1, 1, 1]" >
+      <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <ion-skeleton-text [animated]="true" style="width: 100%; height: 50px;padding: 10px;"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" style="width: 70%; height: 20px;padding: 10px;"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" style="width: 70%; height: 20px;padding: 10px;"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" style="width: 70%; height: 20px;padding: 10px;"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" style="width: 70%; height: 20px;padding: 10px;"></ion-skeleton-text>
+      </div>
+    </div>
+  </div>
+
+  <section *ngIf="this.step=='veroperaciones' && !loadingOperations">
     <div
       (click)="recargaricono()"
       class="ion-text-center"

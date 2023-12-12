@@ -42,6 +42,8 @@ export class PerfilPage implements OnInit {
     contrasenanueva:any;
     contrasenarepetir:any;
 
+    loadingProfile: boolean = true
+
   constructor(
         public cd: ChangeDetectorRef,
     public varios: VariosService,
@@ -64,7 +66,7 @@ export class PerfilPage implements OnInit {
       const objeto= JSON.parse(JSON.stringify(res));
       this.profileInfo = objeto;
 
-      
+      this.loadingProfile = false
     });
 
 
@@ -77,7 +79,7 @@ export class PerfilPage implements OnInit {
     console.log('event111',event);
     // var countrycode=document.getElementById('countrycode');
     // console.log('countrycode',countrycode);
-    
+
     // document.getElementById('seven').innerHTML=countrycode;
   }
   codechangeeee(event){
@@ -103,12 +105,12 @@ setTimeout(() => {
 },300);
 
 
-  
+
 }
 
 cerrarmodalcontrasena(){
   this.modalcontrasena.dismiss();
-    
+
   }
 
   actualizarperfil(){
@@ -142,10 +144,10 @@ cerrarmodalcontrasena(){
       var datadollarplusactualizarcontrasena = {
         nombre_solicitud:'dollarplusactualizarcontrasena',
         id: this.profileInfo.id,
-        contrasenaanterior:this.contrasenaanterior, 
+        contrasenaanterior:this.contrasenaanterior,
         contrasenanueva:this.contrasenanueva
       }
-  
+
       this.varios.variasfunciones(datadollarplusactualizarcontrasena).subscribe(async( res: any ) =>{
         console.log(' respuesta dollarplusactualizarcontrasena',res);
         if(res&&res>0){
@@ -154,7 +156,7 @@ cerrarmodalcontrasena(){
         }
         else{
           this.varios.presentToast('Error: La contraseña anterior es invalida!');
-  
+
         }
       });
     }

@@ -22,6 +22,7 @@ export class CuentasPage implements OnInit {
   cuentaaa_caracteres: ElementRef<any>;
   cuentas_de_usuario: any;
   tarjetas_de_usuario: any;
+  loadingAcounts: boolean = true;
 
   tipo_tarjeta: string = undefined;
   // @ViewChild('cuentaaa_caracteres') myElement: ElementRef;
@@ -112,7 +113,7 @@ export class CuentasPage implements OnInit {
       if(res.tipo_cuenta<1){
         this.router.navigate(['login']);
       }
-      
+
     });
 
 }
@@ -175,7 +176,6 @@ iravercuentas(){
 }
 
 traercuentasytarjetasdeusuario(){
-
   var datadollarplustraercuentasytarjetasdeusuario = {
     nombre_solicitud: 'dollarplustraercuentasytarjetasdeusuario',
     id_user: this.profileInfo.id,
@@ -186,6 +186,7 @@ traercuentasytarjetasdeusuario(){
     this.varios.MostrarYOcultarAlertaMono('dismiss');
     this.cuentas_de_usuario=res[0];
     this.tarjetas_de_usuario=res[1];
+    this.loadingAcounts = false
 
      });
 }
@@ -195,7 +196,7 @@ intentodeagregarcuenta(){
 
   if(this.agregarcuenta.valid){
     console.log('FORMULARIO agregarcuenta',this.agregarcuenta);
-  
+
     var datadollarplusagregarcuentaausuario = {
       nombre_solicitud: 'dollarplusagregarcuentaausuario',
       id_user: this.profileInfo.id,
@@ -253,7 +254,7 @@ isNumberKeyAndLength(evt) {
   }
   return true;
 }
-  
+
 
 calculadordetipodetarjeta(event){
 
@@ -349,7 +350,7 @@ calculadordetipodetarjeta(event){
       else if (valor==38){
         this.tipo_tarjeta='Diners Club';
       }
-    
+
       else {
       }
     }
@@ -394,7 +395,7 @@ calculadordetipodetarjeta(event){
     this.tipo_tarjeta=undefined;
 
   }
-  
+
 }
 
 filtrodecaracteresnumerotarjeta(evt){
@@ -408,14 +409,14 @@ filtrodecaracteresnumerotarjeta(evt){
       return false;
 
     }
-  
+
 }
 
 intentodeagregartarjeta(){
 
   if(this.agregartarjeta.valid){
     console.log('FORMULARIO agregarcuenta',this.agregartarjeta);
-  
+
     var datadollarplusagregartarjetaausuario = {
       nombre_solicitud: 'dollarplusagregartarjetaausuario',
       id_user: this.profileInfo.id,
@@ -446,7 +447,7 @@ async sesion_editar(cuentaotarjeta, tipo){
   const modal = await this.modalController.create({
     component: UsereditartarjetaocuentaPage,
     cssClass: 'agregaralgo',
-    componentProps: { 
+    componentProps: {
       dataparaelmodal:cuentaotarjeta,
       que_creara: tipo
     }
@@ -457,7 +458,7 @@ async sesion_editar(cuentaotarjeta, tipo){
       window.location.reload();
     }
 
- 
+
     });
   return await modal.present();
 
@@ -511,11 +512,11 @@ async nuevacuenta(){
             }
           }
         ],
-             
+
 
 
       });
-  
+
       await alert.present();
 
 
