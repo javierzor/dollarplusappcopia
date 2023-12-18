@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.dollarplus.app',
-  appName: 'Dolar Plus',
+  appName: 'Dollar Plus',
   webDir: 'www',
   server: {
     androidScheme: 'https'
