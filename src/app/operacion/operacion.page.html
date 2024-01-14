@@ -1,7 +1,7 @@
 <ion-content>
   <div style="padding: 40px 40px 0 40px" class="ion-hide-sm-up">
     <p class="main__title ion-text-center" style="margin: 0">
-      Inicia una operación
+      Iniciar Operación
     </p>
   </div>
 
@@ -350,7 +350,7 @@
 
     <ion-grid>
       <div class="ion-text-center">
-        <ion-button (click)="abrir_modal_creditos()">Usar Créditos</ion-button>
+        <ion-button style="color: #fff" (click)="abrir_modal_creditos()">Usar Créditos</ion-button>
       </div>
 
       <ion-modal
@@ -793,20 +793,31 @@
               (click)="step3()"
               color="primary"
               expand="full"
-              >Continuar</ion-button
+              style="color: #fff"
+              >
+                <p style="color: #fff">
+                  Continuar
+                </p>
+              </ion-button
             >
             <ion-button
               *ngIf="!data_de_deposito||!banco_que_envia"
               (click)="abrirmodalerrorpaso2()"
               color="primary"
               expand="full"
-              >Continuar</ion-button
+            >
+              <p style="color: #fff">
+                Continuar
+              </p>
+            </ion-button
             >
           </section>
           <section *ngIf="agrego_algo">
-            <ion-button (click)="step3()" color="primary" expand="full"
-              >Continuar</ion-button
-            >
+            <ion-button style="color: #fff" (click)="step3()" color="primary" expand="full">
+              <p style="color: #fff">
+                Continuar
+              </p>
+            </ion-button>
           </section>
 
           <ion-modal
@@ -1035,6 +1046,7 @@
             (click)="enviar_operacion_con_foto()"
             color="primary"
             expand="full"
+            style="color: #fff"
             >Continuar</ion-button
           >
           <ion-button
@@ -1042,6 +1054,7 @@
             (click)="abrirmodalerrorpaso3()"
             color="primary"
             expand="full"
+            style="color: #fff"
             >Continuar</ion-button
           >
 

@@ -113,6 +113,7 @@ export class VariosService {
     this.router.navigate(['login']);
   }
   async MostrarYOcultarAlertaMono(loadingodismiss) {
+    console.log({loadingodismiss})
     this.isLoadingElMono = true;
     if (loadingodismiss && loadingodismiss == 'present') {
       this.loadingmono = await this.loadingController.create({
@@ -184,7 +185,7 @@ export class VariosService {
               this.router.navigate(['login']);
             }
             else{
-                // se Cumplio: el usuario existe 
+                // se Cumplio: el usuario existe
                 localStorage.setItem('profileInfo', this.encrypt(JSON.stringify(res)));
                 if (res.tipo_cuenta < 1) {
                   this.router.navigate(['login']);
@@ -214,7 +215,7 @@ export class VariosService {
     return this.http.post(url, this.datadollarplusappupdateporid,
       { headers: new HttpHeaders({ "Content-Type": 'application/json' }) });
   }
-  
+
   public generateUrl(file: File): any {
     let formData: FormData = new FormData();
     formData.append('image', file);
