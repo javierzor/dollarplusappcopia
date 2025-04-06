@@ -37,7 +37,7 @@ export class VariosService {
   ) {
   }
   variasfunciones(data: any) {
-    var url = 'https://equipojotamar.com/backend/public/api/variasfunciones';
+    var url = 'https://backend.equipojotamar.com/api/variasfunciones';
     return this.http.post(url, data,
       { headers: new HttpHeaders({ "Content-Type": 'application/json' }) });
   }
